@@ -1,0 +1,37 @@
+---
+title: rodri-go.net
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+  </head>
+
+  <body>
+    {# render navbar #}
+    {# render about #}
+
+    <h1>hi</h1>
+
+    <div id="projects-wrapper" class="main-section projects-wrapper">
+      <div class="projects-container">
+        {%- for project in collections.project | reverse -%}
+          <img class="pr-pic" src="projects/{{project.fileSlug}}/assets/{{project.data.thumbnail}}" alt="{{project.data.imageAlt}}"">
+          <a href="{{project.url}}"">
+            <div class= "pr-body">
+              <h2>{{ project.data.title }}</h2>
+              <p class="pr-subtitle">{{ project.data.subtitle }}</p>
+              <p class="pr-info">{{ project.data.info }}</p>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
