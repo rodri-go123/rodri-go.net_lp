@@ -6,7 +6,7 @@ info: Sculpture, 2020
 thumbnail: butt.jpg
 imageAlt: colourful painting of a butt
 size: small
-tags: ["Research", "Asses"]
+categories: ["Research", "Asses"]
 ---
 
 hi from ass project

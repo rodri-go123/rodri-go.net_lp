@@ -1,58 +1,489 @@
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rodri-go.net</title>
+    <meta name="author" content="Rodrigo Cardoso">
+    <meta name="description" content="Rodrigo is a toolmaker within design. His research interest lies in the philosophical, creative and social dimensions of digital technology.">
+    <meta name="keywords" content="Rodrigo Cardoso, design, graphic, research, autonomous, web, computation, digital, culture, web">
+    <style>
+      #about-container {
+  margin-top: 25px;
+}
+
+#about-container .navbar {
+  display: none;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: var(--spacer/2);
+}
+
+#about-header {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 26px;
+}
+
+.about-wrapper p {
+  font-size: 18px;
+  /* margin-right: 25.5660377358%; */
+  width: 74.4339622642%;
+  margin-right: var(--spacer);
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.about-wrapper a {
+  color: var(--purple-blue);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-wrapper a:hover {
+  color: var(--truck-red);
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 30%;
+  height: 440px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.14) -2px 0px 30px;
+}
+
+.vertical-profile-pic {
+  width: auto;
+  height: 320px;
+  object-fit: cover;
+}
+      #navbar {
+  width: 100%;
+  height: 32px;
+  padding: 20px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-style: normal;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s ease-in-out;
+}
+
+#navbar.scrolled {
+  top: -80px;
+}
+
+.nav-right, .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar h1 {
+  font-weight: 500;
+  font-size: 26px;
+}
+
+.nav-header {
+  margin: 0;
+}
+
+.nav-header i {
+  font-size: 20px;
+  margin-left: 2px;
+}
+
+.nav-btn {
+  display: inline;
+  height: 24px;
+  padding: 12px 14px 4px 14px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 150px;
+  letter-spacing: 1px;
+}
+
+.nav-btn.work:hover {
+  background-color: rgba(219, 221, 255, 0.5294117647);
+  cursor: pointer;
+  color: var(--purple-blue);
+}
+
+.nav-btn.about:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--purple-blue);
+}
+
+.nav-btn.contact:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--truck-red);
+}
+
+.nav-btn.blog:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--black-grey);
+}
+
+.dropdown i {
+  font-size: 14px;
+  vertical-align: -1px;
+}
+
+.btn-active {
+  color: white;
+  background-color: var(--purple-blue);
+  border-color: var(--purple-blue);
+}
+
+.btn-active:hover {
+  color: white;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chevron {
+  position: relative;
+  display: block;
+  height: 50px; /*height should be double border*/
+}
+
+.chevron::before,
+.chevron::after {
+  position: absolute;
+  display: block;
+  content: "";
+  border: 25px solid transparent; /*adjust size*/
+}
+
+/* Replace all text `top` below with left/right/bottom to rotate the chevron */
+.chevron::before {
+  top: 0;
+  border-top-color: var(--black-grey); /*Chevron Color*/
+}
+
+.chevron::after {
+  top: -10px; /*adjust thickness*/
+  border-top-color: var(--black-grey); /*Match background colour*/
+}
+      .footer {
+  position: relative;
+  bottom: 0px;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  height: 24px;
+  padding: 10px 0px 10px 0px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--purple-blue);
+  border-bottom: 2px solid var(--purple-blue);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  color: white;
+}
+
+.footer-items {
+  display: flex;
+  justify-content: flex-start;
+  gap: 56px;
+}
+      .pr-card a:hover {
+  --hover-color: #4848D3;
+}
+
+.pr-pic {
+  width: 100%;
+  border: var(--border-width) solid var(--hover-color);
+}
+
+.pr-body {
+  padding: 16px var(--spacer) 0px 0px;
+}
+
+.pr-body h2 {
+  margin: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.col-large > .pr-body > h2 {
+  font-size: 26px;
+}
+
+.pr-body {
+  margin: 0;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.pr-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.pr-info {
+  font-size: 14px;
+  opacity: 0.65;
+  margin-top: 10px;
+}
+
+.pr-categories {
+  color: var(--purple-blue);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: calc(var(--spacer) * 2);
+}
+
+.pr-categories span {
+  text-decoration: underline;
+}
+
+.pr-categories span :hover {
+  cursor: pointer;
+}
+      .projects-wrapper {
+  width: var(--page-width);
+  padding-top: calc(var(--spacer) * 2);
+  background-color: white;
+  min-height: 100vh;
+  position: relative;
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-container {
+  position: relative;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 23.3018867925% 23.3018867925% 23.3018867925% 23.3018867925%;
+  grid-auto-rows: auto;
+  gap: 24px 24px;
+  width: var(--page-width);
+  height: auto;
+  margin-bottom: calc(var(--spacer) * 2);
+}
+
+.col-large {
+  grid-column: span 3;
+}
+
+.col-medium {
+  grid-column: span 2;
+}
+
+.col-small {
+  grid-column: span 1;
+}
+
+.projects-container a {
+  text-decoration: none;
+  color: var(--black-grey);
+}
+
+.projects-container a:hover {
+  color: var(--purple-blue);
+}
+      #show-nav-header {
+  padding-right: 4px;
+  padding-bottom: 4px;
+}
+
+#project-head-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.project-head {
+  padding-bottom: var(--spacer);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-head-wrapper > h1, .project-head-wrapper > p {
+  width: 48%;
+}
+
+.pr-header-pic {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  right: 0;
+}
+      :root {
+  --black-grey: #252525;
+  --purple-blue: #4848D3;
+  --truck-red: #DF2E38;
+  --spacer: 24px;
+  --page-width: 1060px;
+  --border-width: 1.5px;
+  --hover-color: #4848d300;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--black-grey);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.main-section {
+  width: 100%;
+}
+
+.full-width {
+  width: var(--page-width);
+}
+    </style>
   </head>
 
   <body>
     
-    
-
-    <h1>hi</h1>
-
-    <div id="projects-wrapper" class="main-section projects-wrapper">
-      <div class="projects-container"><img class="pr-pic" src="projects/2021_autonomous_web/assets/aw1.jpg" alt="3D render of a desk"">
-          <a href="/projects/2021_autonomous_web/"">
-            <div class= "pr-body">
-              <h2>The Autonomous Web</h2>
-              <p class="pr-subtitle">How can people self-govern their internet experience? How can they obtain autonomy from the internet while still being able to use it according to their needs?</p>
-              <p class="pr-info">Series of Publications, 2021 - 2022</p>
-            </div>
-          </a><img class="pr-pic" src="projects/2020_ass_project/assets/butt.jpg" alt="colourful painting of a butt"">
-          <a href="/projects/2020_ass_project/"">
-            <div class= "pr-body">
-              <h2>An Ass</h2>
-              <p class="pr-subtitle">A shapely butt for the conoisseurs.</p>
-              <p class="pr-info">Sculpture, 2020</p>
-            </div>
-          </a><img class="pr-pic" src="projects/2020_tiny_project/assets/turtolini.jpg" alt="colourful painting"">
-          <a href="/projects/2020_tiny_project/"">
-            <div class= "pr-body">
-              <h2>Other Tiny Project</h2>
-              <p class="pr-subtitle">I like turtles</p>
-              <p class="pr-info">Sculpture, 2020</p>
-            </div>
-          </a><img class="pr-pic" src="projects/2021_small_project/assets/pic-2.jpg" alt="colourful painting"">
-          <a href="/projects/2021_small_project/"">
-            <div class= "pr-body">
-              <h2>Small Project</h2>
-              <p class="pr-subtitle">Just some fancy subtitle</p>
-              <p class="pr-info">Painting, 2021</p>
-            </div>
-          </a><img class="pr-pic" src="projects/2019_train_project/assets/train.jpg" alt="thomas the train engine"">
-          <a href="/projects/2019_train_project/"">
-            <div class= "pr-body">
-              <h2>Something Medium</h2>
-              <p class="pr-subtitle">A medium sized Thomas the train. Truly avant-garde.</p>
-              <p class="pr-info">Train, 2019</p>
-            </div>
-          </a></div>
+    <div id="navbar" class="navbar projects-nav">
+      <div class="nav-wrapper full-width">
+        <div class="nav-left"><h1 class="nav-header">rodri-go.net</h1></div>
+        <div class="nav-right">
+          <div class="nav-btn dropdown work">Work &nbsp;&#8623;</div>
+          <div class="nav-btn about">About</div>
+          <div class="nav-btn contact">Contact</div>
+          <div class="nav-btn blog">Blog</div>
+        </div>
+      </div>
     </div>
 
+    
 
+<div class="main-section" id="about-container">
+  <div class="about">
+    <div class="about-wrapper full-width">
+      <p class="col-large">
+        <br>
+        Rodrigo is a researcher, designer and programmer exploring the ecological and social dimensions of digital technology.<br>
+        <br>
+        His work challenges how we build and relate to digital tools by examining the entanglements between technological and living systems. Through tinkering, repurposing, and engaging playfully with existing tools, he aims to collectivise access to, and promote systemic literacy around, the technological systems we rely on.<br>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div id="projects-wrapper" class="main-section projects-wrapper">
+
+  <div class="projects-container"><div class="col-large pr-card">
+        <a href="/projects/2021_autonomous_web/">
+          <img class="pr-pic" src="projects/2021_autonomous_web/assets/aw1.jpg" alt="3D render of a desk">
+          <div class= "pr-body">
+            <h2>The Autonomous Web</h2>
+            <p class="pr-subtitle">How can people self-govern their internet experience? How can they obtain autonomy from the internet while still being able to use it according to their needs?</p>
+            <p class="pr-info">Series of Publications, 2021 - 2022</p>
+          </div>
+        </a>
+        <p class="pr-categories"><span>Research</span>&nbsp; / &nbsp;<span>Design</span></p>
+      </div><div class="col-small pr-card">
+        <a href="/projects/2020_ass_project/">
+          <img class="pr-pic" src="projects/2020_ass_project/assets/butt.jpg" alt="colourful painting of a butt">
+          <div class= "pr-body">
+            <h2>An Ass</h2>
+            <p class="pr-subtitle">A shapely butt for the conoisseurs.</p>
+            <p class="pr-info">Sculpture, 2020</p>
+          </div>
+        </a>
+        <p class="pr-categories"><span>Research</span>&nbsp; / &nbsp;<span>Asses</span></p>
+      </div><div class="col-small pr-card">
+        <a href="/projects/2020_tiny_project/">
+          <img class="pr-pic" src="projects/2020_tiny_project/assets/turtolini.jpg" alt="colourful painting">
+          <div class= "pr-body">
+            <h2>Other Tiny Project</h2>
+            <p class="pr-subtitle">I like turtles</p>
+            <p class="pr-info">Sculpture, 2020</p>
+          </div>
+        </a>
+        <p class="pr-categories"><span>Research</span>&nbsp; / &nbsp;<span>Development</span></p>
+      </div><div class="col-small pr-card">
+        <a href="/projects/2021_small_project/">
+          <img class="pr-pic" src="projects/2021_small_project/assets/pic-2.jpg" alt="colourful painting">
+          <div class= "pr-body">
+            <h2>Small Project</h2>
+            <p class="pr-subtitle">Just some fancy subtitle</p>
+            <p class="pr-info">Painting, 2021</p>
+          </div>
+        </a>
+        <p class="pr-categories"><span>Design</span>&nbsp; / &nbsp;<span>Experiments</span></p>
+      </div><div class="col-medium pr-card">
+        <a href="/projects/2019_train_project/">
+          <img class="pr-pic" src="projects/2019_train_project/assets/train.jpg" alt="thomas the train engine">
+          <div class= "pr-body">
+            <h2>Something Medium</h2>
+            <p class="pr-subtitle">A medium sized Thomas the train. Truly avant-garde.</p>
+            <p class="pr-info">Train, 2019</p>
+          </div>
+        </a>
+        <p class="pr-categories"><span>Trains</span></p>
+      </div></div>
+
+</div>
+
+
+    
+    <div class="footer">
+      <div class="footer-container">
+        <div class="footer-items">
+          <p>Let's talk!</p>
+          <p>rodrigo@rodri-go.net</p>
+          <p><i class="fa-brands fa-github"></i> GitHub</p>
+          <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+          <p>Or meet me anywhere in The Hague</p>
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>

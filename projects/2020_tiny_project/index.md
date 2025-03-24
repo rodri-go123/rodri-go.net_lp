@@ -6,7 +6,7 @@ info: Sculpture, 2020
 thumbnail: turtolini.jpg
 imageAlt: colourful painting
 size: small
-tags: ["Research", "Development"]
+categories: ["Research", "Development"]
 ---
 
 hi from tiny project

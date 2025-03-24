@@ -1,37 +1,48 @@
 ---
 title: rodri-go.net
+layout: headers_footers.njk
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-  </head>
-
-  <body>
-    {# render navbar #}
-    {# render about #}
-
-    <h1>hi</h1>
-
-    <div id="projects-wrapper" class="main-section projects-wrapper">
-      <div class="projects-container">
-        {%- for project in collections.project | reverse -%}
-          <img class="pr-pic" src="projects/{{project.fileSlug}}/assets/{{project.data.thumbnail}}" alt="{{project.data.imageAlt}}"">
-          <a href="{{project.url}}"">
-            <div class= "pr-body">
-              <h2>{{ project.data.title }}</h2>
-              <p class="pr-subtitle">{{ project.data.subtitle }}</p>
-              <p class="pr-info">{{ project.data.info }}</p>
-            </div>
-          </a>
-        {%- endfor -%}
-      </div>
+{# navbar #}
+<div class="main-section" id="about-container">
+  <div class="about">
+    <div class="about-wrapper full-width">
+      <p class="col-large">
+        <br>
+        Rodrigo is a researcher, designer and programmer exploring the ecological and social dimensions of digital technology.<br>
+        <br>
+        His work challenges how we build and relate to digital tools by examining the entanglements between technological and living systems. Through tinkering, repurposing, and engaging playfully with existing tools, he aims to collectivise access to, and promote systemic literacy around, the technological systems we rely on.<br>
+      </p>
     </div>
+  </div>
+</div>
 
+{# projects #}
+<div id="projects-wrapper" class="main-section projects-wrapper">
 
+  <div class="projects-container">
 
-  </body>
-</html>
+    {%- for project in collections.project | reverse -%}
+      <div class="col-{{project.data.size}} pr-card">
+        <a href="{{project.url}}">
+          <img class="pr-pic" src="projects/{{project.fileSlug}}/assets/{{project.data.thumbnail}}" alt="{{project.data.imageAlt}}">
+          <div class= "pr-body">
+            <h2>{{ project.data.title }}</h2>
+            <p class="pr-subtitle">{{ project.data.subtitle }}</p>
+            <p class="pr-info">{{ project.data.info }}</p>
+          </div>
+        </a>
+        <p class="pr-categories">
+          {%- for category in project.data.categories -%}
+            <span>{{category | capitalize}}</span>
+            {%- if not loop.last -%}
+              &nbsp; / &nbsp;
+            {%- endif -%}
+          {%- endfor -%}
+        </p>
+      </div>
+    {%- endfor -%}
+
+  </div>
+
+</div>

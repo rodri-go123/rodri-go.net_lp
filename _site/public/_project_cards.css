@@ -1,0 +1,56 @@
+.pr-card a:hover {
+  --hover-color: #4848D3;
+}
+
+.pr-pic {
+  width: 100%;
+  border: var(--border-width) solid var(--hover-color);
+}
+
+.pr-body {
+  padding: 16px var(--spacer) 0px 0px;
+}
+
+.pr-body h2 {
+  margin: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.col-large > .pr-body > h2 {
+  font-size: 26px;
+}
+
+.pr-body {
+  margin: 0;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.pr-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.pr-info {
+  font-size: 14px;
+  opacity: 0.65;
+  margin-top: 10px;
+}
+
+.pr-categories {
+  color: var(--purple-blue);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: calc(var(--spacer) * 2);
+}
+
+.pr-categories span {
+  text-decoration: underline;
+}
+
+.pr-categories span :hover {
+  cursor: pointer;
+}

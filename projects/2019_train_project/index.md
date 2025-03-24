@@ -6,7 +6,7 @@ info: Train, 2019
 thumbnail: train.jpg
 imageAlt: thomas the train engine
 size: medium
-tags: ["Trains"]
+categories: ["Trains"]
 date: 2019-03-23
 ---
 

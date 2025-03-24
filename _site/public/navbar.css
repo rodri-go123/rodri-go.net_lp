@@ -1,0 +1,96 @@
+#navbar {
+  width: 100%;
+  height: 32px;
+  padding: 20px 0px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "degular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+  background-color: rgb(255, 255, 255);
+  transition: all 0.3s ease-in-out;
+}
+
+#navbar.scrolled {
+  top: -80px;
+}
+
+.nav-right, .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar h1 {
+  font-weight: 500;
+  font-size: 26px;
+}
+
+.nav-header {
+  margin: 0;
+}
+
+.nav-header i {
+  font-size: 20px;
+  margin-left: 2px;
+}
+
+.nav-btn {
+  display: inline;
+  height: 24px;
+  padding: 2px 14px 4px 14px;
+  font-size: 18px;
+  font-family: "degular", sans-serif;
+  font-weight: 500;
+  border-radius: 150px;
+  letter-spacing: 1px;
+}
+
+.nav-btn.work:hover {
+  background-color: rgba(219, 221, 255, 0.5294117647);
+  cursor: pointer;
+  color: var(--purple-blue);
+}
+
+.nav-btn.about:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--purple-blue);
+}
+
+.nav-btn.contact:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--truck-red);
+}
+
+.nav-btn.blog:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--black-grey);
+}
+
+.dropdown i {
+  font-size: 14px;
+  vertical-align: -1px;
+}
+
+.btn-active {
+  color: white;
+  background-color: var(--purple-blue);
+  border-color: var(--purple-blue);
+}
+
+.btn-active:hover {
+  color: white;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}

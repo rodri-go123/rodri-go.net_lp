@@ -6,7 +6,7 @@ info: Series of Publications, 2021 - 2022
 thumbnail: aw1.jpg
 imageAlt: 3D render of a desk
 size: large
-tags: ["Research", "Design"]
+categories: ["Research", "Design"]
 date: 2025-03-23
 ---
 
