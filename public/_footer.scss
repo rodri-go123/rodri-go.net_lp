@@ -12,7 +12,7 @@
   align-items: center;
 
   background-color: var(--purple-blue);
-  border-bottom: 2px solid var(--purple-blue);
+  border-bottom: 6px solid var(--purple-blue);
 }
 
 .footer-container {
@@ -29,6 +29,7 @@
 
 .footer-items {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 56px;
+  margin-top: 6px;
 }

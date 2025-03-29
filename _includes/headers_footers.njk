@@ -14,23 +14,24 @@
       {% include "../_site/public/_project_cards.css" %}
       {% include "../_site/public/_projects_grid.css" %}
       {% include "../_site/public/_show.css" %}
+      {% include "../_site/public/_work.css" %}
       {% include "../_site/public/application.css" %}
     </style>
   </head>
 
   <body>
     {# navbar #}
-    <div id="navbar" class="navbar projects-nav">
+    <nav id="navbar" class="navbar projects-nav">
       <div class="nav-wrapper full-width">
         <div class="nav-left"><h1 class="nav-header">rodri-go.net</h1></div>
         <div class="nav-right">
-          <div class="nav-btn dropdown work">Work &nbsp;&#8623;</div>
-          <div class="nav-btn about">About</div>
-          <div class="nav-btn contact">Contact</div>
-          <div class="nav-btn blog">Blog</div>
+          <a href="{% if page.url == '/' %}#work{% else %}/#work{% endif %}" class="nav-btn {% if page.url == '/' %}active{% endif %}">Work &#8623;</a>
+          <div class="nav-btn about {% if page.fileSlug == 'about' %}active{% endif %}">About</div>
+          <div class="nav-btn contact {% if page.fileSlug == 'contact' %}active{% endif %}">Contact</div>
+          <div class="nav-btn blog {% if page.fileSlug == 'blog' %}active{% endif %}">Blog</div>
         </div>
       </div>
-    </div>
+    </nav>
 
     {{ content | safe }}
 

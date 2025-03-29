@@ -51,14 +51,11 @@
   margin-bottom: calc(var(--spacer)*2);
 }
 
-.pr-categories span {
+.pr-categories span:hover {
   // padding: 2px 12px 5px 12px;
   // text-align: center;
   text-decoration: underline;
+  cursor: pointer;
   // border-radius: 16px;
   // background: rgba(72, 72, 211, 0.15);
-}
-
-.pr-categories span :hover {
-  cursor: pointer;
 }

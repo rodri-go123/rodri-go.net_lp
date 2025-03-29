@@ -1,6 +1,8 @@
 import * as sass from 'sass';
 
 export default function (eleventyConfig) {
+	eleventyConfig.addWatchTarget("./public/*.scss");
+  	eleventyConfig.addPassthroughCopy("bundle.js");
 	eleventyConfig.addTemplateFormats("scss");
 
 	// Creates the extension for use

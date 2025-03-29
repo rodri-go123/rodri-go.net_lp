@@ -29,6 +29,7 @@ html, body {
 html {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  scroll-padding-top: 80px; 
 }
 
 .main-section {
@@ -37,4 +38,8 @@ html {
 
 .full-width {
   width: var(--page-width);
+}
+
+.less-padding-top {
+  padding-top: var(--spacer);
 }

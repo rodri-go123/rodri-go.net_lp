@@ -47,10 +47,7 @@
   margin-bottom: calc(var(--spacer) * 2);
 }
 
-.pr-categories span {
+.pr-categories span:hover {
   text-decoration: underline;
-}
-
-.pr-categories span :hover {
   cursor: pointer;
 }

@@ -2,7 +2,8 @@
 layout: projects.njk
 title: An Ass
 subtitle: A shapely butt for the conoisseurs.
-info: Sculpture, 2020
+info: Sculpture
+year: 2020
 thumbnail: butt.jpg
 imageAlt: colourful painting of a butt
 size: small
