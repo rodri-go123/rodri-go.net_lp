@@ -24,6 +24,11 @@
   color: var(--black-grey);
 }
 
+#navbar a:hover {
+  text-decoration: underline;
+  color: var(--purple-blue);
+}
+
 .nav-right, .nav-left {
   display: flex;
   align-items: center;

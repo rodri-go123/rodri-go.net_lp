@@ -95,6 +95,11 @@
   color: var(--black-grey);
 }
 
+#navbar a:hover {
+  text-decoration: underline;
+  color: var(--purple-blue);
+}
+
 .nav-right, .nav-left {
   display: flex;
   align-items: center;
@@ -422,9 +427,9 @@ html {
         <div class="nav-left"><h1 class="nav-header">rodri-go.net</h1></div>
         <div class="nav-right">
           <a href="#work" class="nav-btn active">Work &#8623;</a>
-          <div class="nav-btn about ">About</div>
-          <div class="nav-btn contact ">Contact</div>
-          <div class="nav-btn blog ">Blog</div>
+          <a href="/about" class="nav-btn about ">About</a>
+          <a href="contact" class="nav-btn contact ">Contact</a>
+          <a href="blog" class="nav-btn blog ">Blog</a>
         </div>
       </div>
     </nav>

@@ -1,0 +1,15 @@
+{
+  "totalSize": 1564.00,
+  "pageSizes": {
+    "index.html": 1459.36,
+    "projects/2021_small_project/index.html": 229.28,
+    "projects/2021_autonomous_web/index.html": 377.11,
+    "projects/2019_train_project/index.html": 80.31,
+    "projects/2020_tiny_project/index.html": 410.98,
+    "projects/2020_ass_project/index.html": 328.01,
+    "about/index.html": 8.64,
+    "README/index.html": 0.06,
+    "public/bundle/index.html": 0.00,
+    "work/index.html": 8.52
+  }
+}

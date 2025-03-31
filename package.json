@@ -12,6 +12,7 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "sass": "^1.86.0"
+    "sass": "^1.86.0",
+    "tree": "^0.1.3"
   }
 }

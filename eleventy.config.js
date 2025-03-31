@@ -1,4 +1,7 @@
 import * as sass from 'sass';
+import { execSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
 
 export default function (eleventyConfig) {
 	eleventyConfig.addWatchTarget("./public/*.scss");
@@ -19,4 +22,17 @@ export default function (eleventyConfig) {
 			};
 		},
 	});
+
+	  // Execute the shell script that calculates the total size and page sizes
+	//   eleventyConfig.on('eleventy.before', () => {
+	// 	try {
+	// 	  // Run the shell script to calculate site sizes
+	// 	  execSync('./calculate-site-sizes.sh', { stdio: 'inherit' }); // display output in terminal
+	// 	  console.log('Site size calculations complete.');
+	// 	} catch (error) {
+	// 	  console.error('Error calculating site sizes:', error);
+	// 	}
+	//   });
 };
+
+
