@@ -16,14 +16,14 @@
   margin: 0;
 
   // font-family: "degular", sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
 }
 
-.col-large > .pr-body > h2 {
-  font-size: 26px;
-}
+// .col-large > .pr-body > h2 {
+//   font-size: 26px;
+// }
 
 .pr-body {
   margin: 0;
@@ -37,7 +37,7 @@
 }
 
 .pr-info {
-  font-size: 14px;
+  font-size: 1rem;
   opacity: 0.65;
   margin-top: 10px;
 }
@@ -45,10 +45,9 @@
 .pr-categories {
   color: var(--purple-blue);
   // font-family: "degular", sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
-  margin-bottom: calc(var(--spacer)*2);
 }
 
 .pr-categories span:hover {

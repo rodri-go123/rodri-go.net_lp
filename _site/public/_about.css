@@ -25,7 +25,7 @@
 }
 
 .about-wrapper p {
-  font-size: 18px;
+  font-size: 1.15rem;
   /* margin-right: 25.5660377358%; */
   width: 74.4339622642%;
   margin-right: var(--spacer);

@@ -1,0 +1,84 @@
+#show-nav-header {
+  padding-right: 4px;
+  padding-bottom: 4px;
+}
+
+.project-page-wrapper {
+  // width: 74.4339622642%;
+  padding-bottom: var(--spacer);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: calc(var(--spacer)*2);
+}
+
+.project-head {
+  margin-top: calc(var(--spacer)*3);
+}
+
+// margin-right basically
+.project-head > h1, .project-head > p{
+  width: 46%;
+}
+
+.project-body {
+  width: var(--page-width);
+}
+
+.project-body p {
+  font-size: 1.1rem;
+  width: 65%;
+  line-height: 130%;
+}
+
+.pr-header-pic {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 73px;
+}
+
+.pr-page-title {
+  font-size: 2rem;
+}
+
+.pr-page-subtitle {
+  font-size: 1.4rem;
+  line-height: 120%;
+}
+
+.pr-page-info {
+  font-size: 1.2rem;
+  opacity: 0.65;
+}
+
+.pr-page-size {
+  font-size: 1rem;
+  opacity: 0.65;
+}
+
+.pr-page-categories {
+  font-size: 1.1rem;
+}
+
+.pr-page-categories span {
+  color: var(--purple-blue);
+}
+
+.pr-page-categories span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.large {
+  width: 100%;
+}
+
+.medium {
+  width: 75%;
+}
+
+.small {
+  width: 50%;
+}

@@ -4,7 +4,7 @@ title: An Ass
 subtitle: A shapely butt for the conoisseurs.
 info: Sculpture
 year: 2020
-thumbnail: butt.jpg
+thumbnail: butt.png
 imageAlt: colourful painting of a butt
 size: small
 categories: ["Research", "Asses"]

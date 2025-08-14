@@ -35,7 +35,7 @@
 }
 
 .about-wrapper p {
-  font-size: 18px;
+  font-size: 1.15rem;
   /* margin-right: 25.5660377358%; */
   width: 74.4339622642%;
   margin-right: var(--spacer);
@@ -125,7 +125,7 @@
   height: 24px;
   padding: 8px 14px 4px 14px;
   margin-top: 4px;
-  font-size: 18px;
+  font-size: 1.15rem;
   font-weight: 500;
   border-radius: 150px;
   letter-spacing: 1px;
@@ -197,7 +197,7 @@
 .footer-container {
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   color: white;
@@ -224,13 +224,9 @@
 
 .pr-body h2 {
   margin: 0;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
-}
-
-.col-large > .pr-body > h2 {
-  font-size: 26px;
 }
 
 .pr-body {
@@ -245,17 +241,16 @@
 }
 
 .pr-info {
-  font-size: 14px;
+  font-size: 1rem;
   opacity: 0.65;
   margin-top: 10px;
 }
 
 .pr-categories {
   color: var(--purple-blue);
-  font-size: 14px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
-  margin-bottom: calc(var(--spacer) * 2);
 }
 
 .pr-categories span:hover {
@@ -311,21 +306,30 @@
   padding-bottom: 4px;
 }
 
-#project-head-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.project-head {
+.project-page-wrapper {
   padding-bottom: var(--spacer);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: calc(var(--spacer) * 2);
 }
 
-.project-head-wrapper > h1, .project-head-wrapper > p {
-  width: 48%;
+.project-head {
+  margin-top: calc(var(--spacer) * 3);
+}
+
+.project-head > h1, .project-head > p {
+  width: 46%;
+}
+
+.project-body {
+  width: var(--page-width);
+}
+
+.project-body p {
+  font-size: 1.1rem;
+  width: 65%;
+  line-height: 130%;
 }
 
 .pr-header-pic {
@@ -333,6 +337,51 @@
   height: auto;
   position: absolute;
   right: 0;
+  top: 73px;
+}
+
+.pr-page-title {
+  font-size: 2rem;
+}
+
+.pr-page-subtitle {
+  font-size: 1.4rem;
+  line-height: 120%;
+}
+
+.pr-page-info {
+  font-size: 1.2rem;
+  opacity: 0.65;
+}
+
+.pr-page-size {
+  font-size: 1rem;
+  opacity: 0.65;
+}
+
+.pr-page-categories {
+  font-size: 1.1rem;
+}
+
+.pr-page-categories span {
+  color: var(--purple-blue);
+}
+
+.pr-page-categories span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.large {
+  width: 100%;
+}
+
+.medium {
+  width: 75%;
+}
+
+.small {
+  width: 50%;
 }
       .work-categories {
   display: flex;
@@ -362,13 +411,17 @@
 
 .work-wrapper p {
   color: var(--purple-blue);
-  font-size: 18px;
-  width: 74.4339622642%;
+  font-size: 1.15rem;
+  width: 100%;
   margin-right: var(--spacer);
   font-weight: 400;
   line-height: 160%;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.black {
+  color: var(--black-grey);
 }
 
 .filter-category:hover {
@@ -392,6 +445,7 @@ html, body {
   font-weight: 400;
   font-style: normal;
   color: var(--black-grey);
+  letter-spacing: 0.1px;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -446,8 +500,8 @@ html {
   </div>
   <div id="work" class="work-categories">
     <div class="work-wrapper full-width">
-      <p class="col-large">
-        <span class="filter-category">All categories</span>&nbsp; / &nbsp;<span class="filter-category">Asses</span>&nbsp; / &nbsp;<span class="filter-category">Design</span>&nbsp; / &nbsp;<span class="filter-category">Development</span>&nbsp; / &nbsp;<span class="filter-category">Experiments</span>&nbsp; / &nbsp;<span class="filter-category">Research</span>&nbsp; / &nbsp;<span class="filter-category">Trains</span><br>
+      <p>
+        <span class="black">Work &rarr;</span>&nbsp; <span class="filter-category">All categories</span>&nbsp; / &nbsp;<span class="filter-category">Asses</span>&nbsp; / &nbsp;<span class="filter-category">Design</span>&nbsp; / &nbsp;<span class="filter-category">Development</span>&nbsp; / &nbsp;<span class="filter-category">Experiments</span>&nbsp; / &nbsp;<span class="filter-category">Research</span>&nbsp; / &nbsp;<span class="filter-category">Trains</span><br>
         <span class="filter-category">All years</span>&nbsp; / &nbsp;<span class="filter-category">2021</span>&nbsp; / &nbsp;<span class="filter-category">2020</span>&nbsp; / &nbsp;<span class="filter-category">2019</span></p>
     </div>
   </div>
@@ -458,7 +512,7 @@ html {
 
   <div class="projects-container"><div class="col-large pr-card">
         <a href="/projects/2021_autonomous_web/">
-          <img class="pr-pic" src="projects/2021_autonomous_web/assets/aw1.jpg" alt="3D render of a desk">
+          <img class="pr-pic" src="projects/2021_autonomous_web/assets/_processed/aw1.png" alt="3D render of a desk">
           <div class= "pr-body">
             <h2>The Autonomous Web</h2>
             <p class="pr-subtitle">How can people self-govern their internet experience? How can they obtain autonomy from the internet while still being able to use it according to their needs?</p>
@@ -466,9 +520,14 @@ html {
           </div>
         </a>
         <p class="pr-categories"><span>Research</span>&nbsp; / &nbsp;<span>Design</span></p>
+
+        
+        
+        <p class="pr-info">377.11 KB</p>
+
       </div><div class="col-small pr-card">
         <a href="/projects/2020_ass_project/">
-          <img class="pr-pic" src="projects/2020_ass_project/assets/butt.jpg" alt="colourful painting of a butt">
+          <img class="pr-pic" src="projects/2020_ass_project/assets/_processed/butt.png" alt="colourful painting of a butt">
           <div class= "pr-body">
             <h2>An Ass</h2>
             <p class="pr-subtitle">A shapely butt for the conoisseurs.</p>
@@ -476,9 +535,14 @@ html {
           </div>
         </a>
         <p class="pr-categories"><span>Research</span>&nbsp; / &nbsp;<span>Asses</span></p>
+
+        
+        
+        <p class="pr-info">328.01 KB</p>
+
       </div><div class="col-small pr-card">
         <a href="/projects/2020_tiny_project/">
-          <img class="pr-pic" src="projects/2020_tiny_project/assets/turtolini.jpg" alt="colourful painting">
+          <img class="pr-pic" src="projects/2020_tiny_project/assets/_processed/turtolini.png" alt="colourful painting">
           <div class= "pr-body">
             <h2>Other Tiny Project</h2>
             <p class="pr-subtitle">I like turtles</p>
@@ -486,9 +550,14 @@ html {
           </div>
         </a>
         <p class="pr-categories"><span>Research</span>&nbsp; / &nbsp;<span>Development</span></p>
+
+        
+        
+        <p class="pr-info">410.98 KB</p>
+
       </div><div class="col-small pr-card">
         <a href="/projects/2021_small_project/">
-          <img class="pr-pic" src="projects/2021_small_project/assets/pic-2.jpg" alt="colourful painting">
+          <img class="pr-pic" src="projects/2021_small_project/assets/_processed/pic-2.png" alt="colourful painting">
           <div class= "pr-body">
             <h2>Small Project</h2>
             <p class="pr-subtitle">Just some fancy subtitle</p>
@@ -496,9 +565,14 @@ html {
           </div>
         </a>
         <p class="pr-categories"><span>Design</span>&nbsp; / &nbsp;<span>Experiments</span></p>
+
+        
+        
+        <p class="pr-info">229.28 KB</p>
+
       </div><div class="col-medium pr-card">
         <a href="/projects/2019_train_project/">
-          <img class="pr-pic" src="projects/2019_train_project/assets/train.jpg" alt="thomas the train engine">
+          <img class="pr-pic" src="projects/2019_train_project/assets/_processed/train.png" alt="thomas the train engine">
           <div class= "pr-body">
             <h2>Something Medium</h2>
             <p class="pr-subtitle">A medium sized Thomas the train. Truly avant-garde.</p>
@@ -506,6 +580,11 @@ html {
           </div>
         </a>
         <p class="pr-categories"><span>Trains</span></p>
+
+        
+        
+        <p class="pr-info">80.31 KB</p>
+
       </div></div>
 
 </div>

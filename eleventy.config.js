@@ -1,11 +1,8 @@
 import * as sass from 'sass';
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
 
 export default function (eleventyConfig) {
 	eleventyConfig.addWatchTarget("./public/*.scss");
-  	eleventyConfig.addPassthroughCopy("bundle.js");
+  	// eleventyConfig.addPassthroughCopy("bundle.js");
 	eleventyConfig.addTemplateFormats("scss");
 
 	// Creates the extension for use
@@ -23,16 +20,19 @@ export default function (eleventyConfig) {
 		},
 	});
 
-	  // Execute the shell script that calculates the total size and page sizes
-	//   eleventyConfig.on('eleventy.before', () => {
-	// 	try {
-	// 	  // Run the shell script to calculate site sizes
-	// 	  execSync('./calculate-site-sizes.sh', { stdio: 'inherit' }); // display output in terminal
-	// 	  console.log('Site size calculations complete.');
-	// 	} catch (error) {
-	// 	  console.error('Error calculating site sizes:', error);
-	// 	}
-	//   });
+	// Using compressed images
+	eleventyConfig.addPassthroughCopy({
+		"projects/**/assets/_processed": "projects"
+	  });
+	
+	return {
+	dir: {
+		input: ".", // This ensures all files in the root directory are processed
+		output: "_site",
+		includes: "_includes", // Make sure this matches your actual includes folder
+	}
+    };
+
 };
 
 

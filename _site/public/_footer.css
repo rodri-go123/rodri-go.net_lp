@@ -16,7 +16,7 @@
 .footer-container {
   display: flex;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 500;
   color: white;

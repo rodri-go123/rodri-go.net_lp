@@ -4,7 +4,7 @@ layout: headers_footers.njk
 ---
 
 <h2>Site Size Summary</h2>
-<p>Total Site Size: {{ siteSize.totalSize }} KB</p>
+<p>Total Site Size: {{ (siteSize.totalSize / 1024) | round(2) }} MB</p>
 
 <h3>Page Sizes</h3>
 <ul>
