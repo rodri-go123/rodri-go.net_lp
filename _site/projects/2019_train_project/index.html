@@ -314,6 +314,10 @@
   margin-bottom: calc(var(--spacer) * 2);
 }
 
+.project-page-wrapper img {
+  max-width: var(--page-width);
+}
+
 .project-head {
   margin-top: calc(var(--spacer) * 3);
 }
@@ -363,13 +367,17 @@
   font-size: 1.1rem;
 }
 
-.pr-page-categories span {
+.pr-page-categories {
   color: var(--purple-blue);
 }
 
 .pr-page-categories span:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.extra-large {
+  width: var(--page-width);
 }
 
 .large {
@@ -441,7 +449,7 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: var(--black-grey);
@@ -478,7 +486,7 @@ html {
     
     <nav id="navbar" class="navbar projects-nav">
       <div class="nav-wrapper full-width">
-        <div class="nav-left"><h1 class="nav-header">rodri-go.net</h1></div>
+        <div class="nav-left"><h1 class="nav-header"><a href="/">rodri-go.net</a></h1></div>
         <div class="nav-right">
           <a href="/#work" class="nav-btn ">Work &#8623;</a>
           <a href="/about" class="nav-btn about ">About</a>
@@ -499,7 +507,7 @@ html {
 
       
       
-      <p class="pr-page-size">80.31 KB</p>
+      <p class="pr-page-size">89.68 KB</p>
     </div>
     <img class="pr-header-pic" src="./assets/train.webp" alt="thomas the train engine">
   </div>

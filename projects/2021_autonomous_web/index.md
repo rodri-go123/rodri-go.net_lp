@@ -23,3 +23,34 @@ These are the questions at the core of the Autonomous Web, an iterative series o
 The Autonomous Web project has taken part in ZineCamp Festival, Conversas and the WdKA Graduation Show.
 Featured in Trade Plough online magazine and on wdka.nl.
 Nominated for the 2021 WdKA Bachelor Research Award. 
+
+# This is a h1
+
+## this is a h2
+
+### and a h3
+
+And now we're going to write a little more, throw in some **bold** and *italic,* and paste an image right below this:
+
+the image below should be extra large 
+
+![alt text](assets/aw2.jpg){.extra-large}
+
+the image below should be large 
+
+![alt text](assets/aw2.jpg){.large}
+
+this one medium
+
+![alt text](assets/aw2.jpg){.medium}
+
+the next image should be small
+
+![alt text](assets/aw5.jpg){.small}
+
+last one has no class 
+
+![alt text](assets/aw5.jpg)
+seeing if this is in the same p as the image
+
+another paragraph

@@ -2,6 +2,12 @@ import * as sass from 'sass';
 import fs from 'fs';
 import path from 'path';
 
+// add some extra fluff to the markdown
+import markdownIt from "markdown-it";
+import markdownItAttrs from "markdown-it-attrs";
+
+
+
 export default function (eleventyConfig) {
 	eleventyConfig.addWatchTarget("./public/*.scss");
 	eleventyConfig.addTemplateFormats("scss");
@@ -13,6 +19,42 @@ export default function (eleventyConfig) {
 			return async () => result.css;
 		},
 	});
+
+	// custom mardown parsing
+	eleventyConfig.setLibrary(
+		"md",
+		markdownIt({ html: true })
+		.use(markdownItAttrs)
+		.use(function(md) {
+			const defaultRender = md.renderer.rules.image || function(tokens, idx, options, env, self) {
+			return self.renderToken(tokens, idx, options);
+			};
+			
+			// image parsing
+			md.renderer.rules.image = function(tokens, idx, options, env, self) {
+			let token = tokens[idx];
+			let srcIndex = token.attrIndex("src");
+
+			if (srcIndex >= 0) {
+				let src = token.attrs[srcIndex][1];
+
+				// add assets/ if no folder is present
+				if (!src.includes("/") && !src.startsWith("assets/")) {
+				src = "assets/" + src;
+				}
+
+				// convert extension to .webp if needed
+				if (!src.toLowerCase().endsWith(".webp")) {
+				src = src.replace(/\.(jpg|jpeg|png)$/i, ".webp");
+				}
+
+				token.attrs[srcIndex][1] = src;
+			}
+
+			return defaultRender(tokens, idx, options, env, self);
+			};
+		})
+	);
 
 	// Use compressed images in projects
 	eleventyConfig.addPassthroughCopy({

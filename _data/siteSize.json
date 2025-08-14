@@ -1,15 +1,20 @@
 {
-  "totalSize": 1564.00,
+  "totalSize": 3884.00,
   "pageSizes": {
-    "index.html": 1459.36,
-    "projects/2021_small_project/index.html": 229.28,
-    "projects/2021_autonomous_web/index.html": 377.11,
-    "projects/2019_train_project/index.html": 80.31,
-    "projects/2020_tiny_project/index.html": 410.98,
-    "projects/2020_ass_project/index.html": 328.01,
-    "about/index.html": 8.64,
+    "2021_small_project/index.html": 287.87,
+    "2021_autonomous_web/index.html": 453.89,
+    "2019_train_project/index.html": 113.00,
+    "index.html": 3673.67,
+    "2020_tiny_project/index.html": 619.69,
+    "projects/2021_small_project/index.html": 192.47,
+    "projects/2021_autonomous_web/index.html": 697.44,
+    "projects/2019_train_project/index.html": 89.68,
+    "projects/2020_tiny_project/index.html": 442.78,
+    "projects/2020_ass_project/index.html": 294.30,
+    "about/index.html": 9.25,
     "README/index.html": 0.06,
     "public/bundle/index.html": 0.00,
-    "work/index.html": 8.52
+    "work/index.html": 9.47,
+    "2020_ass_project/index.html": 484.04
   }
 }
