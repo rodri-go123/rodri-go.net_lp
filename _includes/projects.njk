@@ -24,7 +24,7 @@ layout: headers_footers.njk
       {% set lookupKey = page.url.slice(1) ~ 'index.html' %}
       <p class="pr-page-size">{{ siteSize.pageSizes[lookupKey] or 'Unknown' }} KB</p>
     </div>
-    <img class="pr-header-pic" src="./assets/_processed/{{ thumbnail }}" alt="{{ imageAlt }}">
+    <img class="pr-header-pic" src="./assets/{{ thumbnail }}.webp" alt="{{ imageAlt }}">
   </div>
 
 {# body #}

@@ -4,7 +4,7 @@ title: Something Medium
 subtitle: A medium sized Thomas the train. Truly avant-garde.
 info: Train
 year: 2019
-thumbnail: train.png
+thumbnail: train
 imageAlt: thomas the train engine
 size: medium
 categories: ["Trains"]

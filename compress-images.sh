@@ -1,20 +1,22 @@
 #!/bin/bash
 
-# Find all images in projects/*/assets/ and process them
+# Find all JPG and PNG images
 find projects -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | while read -r img; do
-    # Determine output path: projects/.../assets/_processed/filename.png
     dir=$(dirname "$img")
-    filename=$(basename "$img" | sed 's/\.[^.]*$/.png/')  # Change extension to .png
+    filename=$(basename "$img" | sed 's/\.[^.]*$/.webp/')
     output_dir="$dir/_processed"
     output_path="$output_dir/$filename"
 
-    # Create _processed directory if it doesn't exist
     mkdir -p "$output_dir"
 
-    echo "Compressing: $img -> $output_path"
+    echo "Converting to WebP: $img -> $output_path"
 
-    # Convert image to PNG8 with dithering
-    convert "$img" -resize 50% -colors 16 -ordered-dither o4x4,8 -interpolate Nearest -filter point PNG8:"$output_path"
+    # Convert to WebP at high quality (85) with near-lossless compression for PNGs
+    if [[ "$img" =~ \.png$ ]]; then
+        cwebp -q 85 -near_lossless 60 "$img" -o "$output_path"
+    else
+        cwebp -q 85 "$img" -o "$output_path"
+    fi
 done
 
-echo "✅ Compression complete! Images saved in '_processed' subfolders."
+echo "✅ Conversion complete! Images saved in '_processed' subfolders."
