@@ -45,3 +45,14 @@ html {
 .less-padding-top {
   padding-top: var(--spacer);
 }
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+}

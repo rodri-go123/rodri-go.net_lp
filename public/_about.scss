@@ -8,18 +8,6 @@
   display: none;
 }
 
-.about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  padding-bottom: var(--spacer/2);
-}
-
 #about-header {
 // font-family: "degular", sans-serif;
 font-weight: 500;

@@ -1,16 +1,11 @@
-.projects-wrapper {
-  width: var(--page-width);
-  padding-top: calc(var(--spacer) * 1);
-  background-color: white;
+#projects-container {
+  padding-top: var(--spacer);
   min-height: 100vh;
   position: relative;
   z-index: 8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.projects-container {
+.projects-wrapper {
   position: relative;
   display: grid;
   grid-auto-flow: row;
@@ -34,11 +29,11 @@
   grid-column: span 1;
 }
 
-.projects-container a {
+#projects-container a {
   text-decoration: none;
   color: var(--black-grey);
 }
 
-.projects-container a:hover {
+#projects-container a:hover {
   color: var(--purple-blue);
 }

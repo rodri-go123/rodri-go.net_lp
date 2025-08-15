@@ -8,19 +8,11 @@
   margin-top: 25px;
 }
 
-#work-container .navbar {
+#work-container #navbar {
   display: none;
 }
 
-.work {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.work-wrapper {
-  display: flex;
-  justify-content: flex-start;
+#work-wrapper {
   margin-top: 15px;
 }
 

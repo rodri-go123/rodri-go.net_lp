@@ -4,12 +4,8 @@
 }
 
 .project-page-wrapper {
-  // width: 74.4339622642%;
   padding-bottom: var(--spacer);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: calc(var(--spacer)*2);
+  margin-bottom: calc(var(--spacer) * 2);
 }
 
 .project-page-wrapper img {

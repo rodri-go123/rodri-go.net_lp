@@ -5,20 +5,10 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  // font-family: "degular", sans-serif;
   font-weight: 400;
   font-style: normal;
-
   border-bottom: 1px solid rgba(0, 0, 0, 0.103);
-  // box-shadow: rgba(0, 0, 0, 0.12) 0px -5px 40px;
-  // background-color: #DBDDFF;
   background-color: rgb(255, 255, 255);
-  // transition: transform 0.3s ease-in-out, position 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -38,15 +28,15 @@
   color: var(--purple-blue);
 }
 
+#navbar h1 {
+  font-weight: 500;
+  font-size: 26px;
+}
+
 .nav-right, .nav-left {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.navbar h1 {
-  font-weight: 500;
-  font-size: 26px;
 }
 
 .nav-header {

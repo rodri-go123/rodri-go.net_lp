@@ -5,9 +5,6 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-weight: 400;
   font-style: normal;
   border-bottom: 1px solid rgba(0, 0, 0, 0.103);
@@ -29,15 +26,15 @@
   color: var(--purple-blue);
 }
 
+#navbar h1 {
+  font-weight: 500;
+  font-size: 26px;
+}
+
 .nav-right, .nav-left {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.navbar h1 {
-  font-weight: 500;
-  font-size: 26px;
 }
 
 .nav-header {
