@@ -21,10 +21,6 @@
   width: 46%;
 }
 
-.project-body {
-  width: var(--page-width);
-}
-
 .project-body p {
   font-size: 1.1rem;
   width: 65%;
@@ -40,7 +36,8 @@
 }
 
 .pr-page-title {
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: normal;
 }
 
 .pr-page-subtitle {

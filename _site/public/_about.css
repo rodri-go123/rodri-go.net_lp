@@ -13,7 +13,7 @@
 }
 
 .about-wrapper p {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   /* margin-right: 25.5660377358%; */
   width: 74.4339622642%;
   margin-right: var(--spacer);
@@ -24,12 +24,6 @@
 .about-wrapper a {
   color: var(--purple-blue);
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
-
-.about-wrapper a:hover {
-  color: var(--truck-red);
-  cursor: pointer;
 }
 
 .profile-pic {
@@ -46,4 +40,28 @@
   width: auto;
   height: 320px;
   object-fit: cover;
+}
+
+.read-more {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--purple-blue);
+  border: 1px solid var(--purple-blue);
+  border-radius: 50px;
+  padding: 0px 8px 0px 10px;
+  display: inline-block;
+  margin-top: 6px;
+  position: relative;
+  margin-left: -2px;
+}
+
+.read-more:hover {
+  background-color: var(--purple-blue);
+  color: white;
+  cursor: pointer;
+}
+
+.read-more-arrow {
+  font-size: 1.3rem;
+  font-weight: bolder;
 }

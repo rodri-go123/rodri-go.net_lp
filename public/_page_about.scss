@@ -1,0 +1,11 @@
+.about-page-container {
+    padding-top: var(--spacer);
+    padding-bottom: var(--spacer);
+    min-height: 90vh;
+}
+
+.about-body p {
+  font-size: 1.1rem;
+  width: 65%;
+  line-height: 130%;
+}

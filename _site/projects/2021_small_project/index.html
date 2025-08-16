@@ -23,7 +23,7 @@
 }
 
 .about-wrapper p {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   /* margin-right: 25.5660377358%; */
   width: 74.4339622642%;
   margin-right: var(--spacer);
@@ -34,12 +34,6 @@
 .about-wrapper a {
   color: var(--purple-blue);
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
-
-.about-wrapper a:hover {
-  color: var(--truck-red);
-  cursor: pointer;
 }
 
 .profile-pic {
@@ -56,6 +50,30 @@
   width: auto;
   height: 320px;
   object-fit: cover;
+}
+
+.read-more {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--purple-blue);
+  border: 1px solid var(--purple-blue);
+  border-radius: 50px;
+  padding: 0px 8px 0px 10px;
+  display: inline-block;
+  margin-top: 6px;
+  position: relative;
+  margin-left: -2px;
+}
+
+.read-more:hover {
+  background-color: var(--purple-blue);
+  color: white;
+  cursor: pointer;
+}
+
+.read-more-arrow {
+  font-size: 1.3rem;
+  font-weight: bolder;
 }
       #navbar {
   width: 100%;
@@ -300,10 +318,6 @@
   width: 46%;
 }
 
-.project-body {
-  width: var(--page-width);
-}
-
 .project-body p {
   font-size: 1.1rem;
   width: 65%;
@@ -319,7 +333,8 @@
 }
 
 .pr-page-title {
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: normal;
 }
 
 .pr-page-subtitle {
@@ -365,6 +380,17 @@
 .small {
   width: 50%;
 }
+      .about-page-container {
+  padding-top: var(--spacer);
+  padding-bottom: var(--spacer);
+  min-height: 90vh;
+}
+
+.about-body p {
+  font-size: 1.1rem;
+  width: 65%;
+  line-height: 130%;
+}
       .work-categories {
   display: flex;
   justify-content: center;
@@ -385,17 +411,13 @@
 
 .work-wrapper p {
   color: var(--purple-blue);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   width: 100%;
   margin-right: var(--spacer);
   font-weight: 400;
   line-height: 160%;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.black {
-  color: var(--black-grey);
 }
 
 .filter-category:hover {
@@ -456,6 +478,14 @@ html {
   display: flex;
   justify-content: flex-start;
 }
+
+.inline-header {
+  font-size: 1.3rem;
+}
+
+.black {
+  color: var(--black-grey);
+}
     </style>
   </head>
 
@@ -467,8 +497,8 @@ html {
         <div class="nav-right">
           <a href="/#work" class="nav-btn ">Work &#8623;</a>
           <a href="/about" class="nav-btn about ">About</a>
-          <a href="contact" class="nav-btn contact ">Contact</a>
-          <a href="blog" class="nav-btn blog ">Blog</a>
+          <a href="/contact" class="nav-btn contact ">Contact</a>
+          <a href="/blog" class="nav-btn blog ">Blog</a>
         </div>
       </div>
     </nav>
@@ -491,7 +521,7 @@ html {
 
 
   <div class="project-page-wrapper flex-center">
-    <div class="project-body">
+    <div class="project-body full-width">
       <p>hi from project two</p>
 
     </div>

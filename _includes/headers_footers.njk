@@ -13,7 +13,8 @@
       {% include "../_site/public/_footer.css" %}
       {% include "../_site/public/_project_cards.css" %}
       {% include "../_site/public/_projects_grid.css" %}
-      {% include "../_site/public/_projects.css" %}
+      {% include "../_site/public/_page_projects.css" %}
+      {% include "../_site/public/_page_about.css" %}
       {% include "../_site/public/_work.css" %}
       {% include "../_site/public/application.css" %}
     </style>
@@ -27,8 +28,8 @@
         <div class="nav-right">
           <a href="{% if page.url == '/' %}#work{% else %}/#work{% endif %}" class="nav-btn {% if page.url == '/' %}active{% endif %}">Work &#8623;</a>
           <a href="/about" class="nav-btn about {% if page.fileSlug == 'about' %}active{% endif %}">About</a>
-          <a href="contact" class="nav-btn contact {% if page.fileSlug == 'contact' %}active{% endif %}">Contact</a>
-          <a href="blog" class="nav-btn blog {% if page.fileSlug == 'blog' %}active{% endif %}">Blog</a>
+          <a href="/contact" class="nav-btn contact {% if page.fileSlug == 'contact' %}active{% endif %}">Contact</a>
+          <a href="/blog" class="nav-btn blog {% if page.fileSlug == 'blog' %}active{% endif %}">Blog</a>
         </div>
       </div>
     </nav>

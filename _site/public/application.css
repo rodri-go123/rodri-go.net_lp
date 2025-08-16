@@ -52,3 +52,11 @@ html {
   display: flex;
   justify-content: flex-start;
 }
+
+.inline-header {
+  font-size: 1.3rem;
+}
+
+.black {
+  color: var(--black-grey);
+}
