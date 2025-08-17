@@ -113,6 +113,9 @@ export default function (eleventyConfig) {
 			input: ".",
 			output: "_site",
 			includes: "_includes",
-		}
+		},
+		markdownTemplateEngine: "njk", // use Nunjucks inside Markdown
+    	htmlTemplateEngine: "njk",     // use Nunjucks inside .html files
+    	dataTemplateEngine: "njk",     // use Nunjucks in .json/.yml/.js data files
 	};
 }
