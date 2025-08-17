@@ -1,3 +1,10 @@
+---
+css:
+  - /public/_navbar.css
+  - /public/_footer.css
+  - /public/application.css
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,17 +14,13 @@
     <meta name="author" content="Rodrigo Cardoso">
     <meta name="description" content="Rodrigo is a toolmaker within design. His research interest lies in the philosophical, creative and social dimensions of digital technology.">
     <meta name="keywords" content="Rodrigo Cardoso, design, graphic, research, autonomous, web, computation, digital, culture, web">
-    <style>
-      {% include "../_site/public/_about.css" %}
-      {% include "../_site/public/_navbar.css" %}
-      {% include "../_site/public/_footer.css" %}
-      {% include "../_site/public/_project_cards.css" %}
-      {% include "../_site/public/_projects_grid.css" %}
-      {% include "../_site/public/_page_projects.css" %}
-      {% include "../_site/public/_page_about.css" %}
-      {% include "../_site/public/_work.css" %}
-      {% include "../_site/public/application.css" %}
-    </style>
+
+    {% if css %}
+      {% for sheet in css %}
+        <link rel="stylesheet" href="{{ sheet }}">
+      {% endfor %}
+    {% endif %}
+    
   </head>
 
   <body>
