@@ -1,41 +1,33 @@
----
-tags: [project]
-layout: headers_footers.njk
-css:
-  - /public/_page_projects.css
----
-{# head #}
-<div class="project-page-container main-section">
-  <div class="project-page-wrapper flex-center">
-    <div class="project-head full-width">
-      <h1 class="pr-page-title">{{ title }}</h1>
-      <p class="pr-page-subtitle">{{ subtitle }}</p>
-      <p class="pr-page-info">{{ info }}, {{year}}</p>
-      <p class="pr-page-categories">
+<div id="projects-container" class="main-section flex-center">
 
-        {%- for category in categories -%}
-          <span>{{ category | capitalize }}</span>
-          {%- if not loop.last -%}
+  <div class="projects-wrapper">
+
+    {%- for project in collections.project | reverse -%}
+      <div class="col-{{project.data.size}} pr-card">
+        <a href="{{project.url}}">
+          <img class="pr-pic" src="projects/{{project.fileSlug}}/assets/{{project.data.thumbnail}}.webp" alt="{{project.data.imageAlt}}">
+          <div class= "pr-body">
+            <h2>{{ project.data.title }}</h2>
+            <p class="pr-subtitle">{{ project.data.subtitle }}</p>
+            <p class="pr-info">{{ project.data.info }}, {{ project.data.year }}</p>
+          </div>
+        </a>
+        <p class="pr-categories">
+          {%- for category in project.data.categories -%}
+            <span>{{category | capitalize}}</span>
+            {%- if not loop.last -%}
               &nbsp; / &nbsp;
             {%- endif -%}
-        {%- endfor -%}
+          {%- endfor -%}
+        </p>
 
-      </p>
+        {# Lookup the page size #}
+        {% set lookupKey = project.url.slice(1) ~ 'index.html' %}
+        <p class="pr-info">{{ siteSize.pageSizes[lookupKey] or 'Unknown' }} KB</p>
 
-      {% set cleanUrl = page.url | replace('^/', '') %}
-      {% set lookupKey = page.url.slice(1) ~ 'index.html' %}
-      <p class="pr-page-size">{{ siteSize.pageSizes[lookupKey] or 'Unknown' }} KB</p>
-    </div>
-    <img class="pr-header-pic" src="./assets/{{ thumbnail }}.webp" alt="{{ imageAlt }}">
-  </div>
+      </div>
+    {%- endfor -%}
 
-{# body #}
-  <div class="project-page-wrapper flex-center">
-    <div class="project-body full-width">
-      {{ content | safe }}
-    </div>
   </div>
 
 </div>
-
-

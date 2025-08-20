@@ -1,5 +1,5 @@
 ---
-layout: projects.njk
+layout: page_projects.njk
 title: The Autonomous Web
 subtitle: How can people self-govern their internet experience? How can they obtain autonomy from the internet while still being able to use it according to their needs?
 info: Series of Publications

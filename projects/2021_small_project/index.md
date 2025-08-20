@@ -1,5 +1,5 @@
 ---
-layout: projects.njk
+layout: page_projects.njk
 title: Small Project
 subtitle: Just some fancy subtitle
 info: Painting

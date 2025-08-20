@@ -1,6 +1,6 @@
 ---
 title: rodri-go.net
-layout: about.njk
+layout: page_about.njk
 ---
 
 ## Bio

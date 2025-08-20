@@ -1,5 +1,5 @@
 ---
-layout: projects.njk
+layout: page_projects.njk
 title: An Ass
 subtitle: A shapely butt for the conoisseurs.
 info: Sculpture

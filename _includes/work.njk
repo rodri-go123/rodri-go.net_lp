@@ -1,0 +1,41 @@
+<div class="main-section" id="work-container">
+  <div id="work" class="flex-center">
+    <div class="work-wrapper flex-start full-width">
+      <p>
+        <span class="inline-header black">Work &rarr;</span>&nbsp; <span class="filter-category">All categories</span>&nbsp; / &nbsp;
+        {%- set allCategories = [] -%}
+
+        {%- for project in collections.project -%}
+          {%- for category in project.data.categories -%}
+            {%- if category not in allCategories -%}
+              {%- set allCategories = allCategories.concat([category]) -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+
+        {%- for category in allCategories | sort -%}
+          <span class="filter-category">{{category | capitalize}}</span>
+          {%- if not loop.last -%}
+            &nbsp; / &nbsp;
+          {%- endif -%}
+        {%- endfor -%}
+        <br>
+        <span class="filter-category">All years</span>&nbsp; / &nbsp;
+        {%- set allYears = [] -%}
+
+        {%- for project in collections.project -%}
+          {%- if project.data.year not in allYears -%}
+            {%- set allYears = allYears.concat([project.data.year]) -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- for year in allYears | sort | reverse -%}
+          <span class="filter-category">{{ year }}</span>
+          {%- if not loop.last -%}
+            &nbsp; / &nbsp;
+          {%- endif -%}
+        {%- endfor -%}
+      </p>
+    </div>
+  </div>
+</div>

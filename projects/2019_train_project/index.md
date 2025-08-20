@@ -1,5 +1,5 @@
 ---
-layout: projects.njk
+layout: page_projects.njk
 title: Something Medium
 subtitle: A medium sized Thomas the train. Truly avant-garde.
 info: Train

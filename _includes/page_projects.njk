@@ -1,0 +1,41 @@
+---
+tags: [project]
+layout: headers_footers.njk
+css:
+  - /public/_page_projects.css
+---
+<div class="project-page-container main-section">
+  {# head #}
+  <div class="project-page-wrapper flex-center">
+    <div class="project-head full-width">
+      <h1 class="pr-page-title">{{ title }}</h1>
+      <p class="pr-page-subtitle">{{ subtitle }}</p>
+      <p class="pr-page-info">{{ info }}, {{year}}</p>
+      <p class="pr-page-categories">
+
+        {%- for category in categories -%}
+          <span>{{ category | capitalize }}</span>
+          {%- if not loop.last -%}
+              &nbsp; / &nbsp;
+            {%- endif -%}
+        {%- endfor -%}
+
+      </p>
+
+      {% set cleanUrl = page.url | replace('^/', '') %}
+      {% set lookupKey = page.url.slice(1) ~ 'index.html' %}
+      <p class="pr-page-size">{{ siteSize.pageSizes[lookupKey] or 'Unknown' }} KB</p>
+    </div>
+    <img class="pr-header-pic" src="./assets/{{ thumbnail }}.webp" alt="{{ imageAlt }}">
+  </div>
+
+  {# body #}
+  <div class="project-page-wrapper flex-center">
+    <div class="project-body full-width">
+      {{ content | safe }}
+    </div>
+  </div>
+
+</div>
+
+

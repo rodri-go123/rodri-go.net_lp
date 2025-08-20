@@ -9,90 +9,10 @@ css:
 ---
 
 {# about #}
-<div class="main-section" id="about-container">
-  <div class="about flex-center">
-    <div class="about-wrapper flex-start full-width">
-      <p class="col-large">
-        Rodrigo is a researcher, designer and programmer exploring the ecological and social dimensions of digital technology. His work challenges how we build and relate to digital tools by examining the entanglements between technological and living systems.<br> <a href="/about" class="read-more">READ MORE <span class="read-more-arrow">&#8702;</span></a>
-      </p>
-    </div>
-  </div>
-</div>
+{% include "about.njk" %}
 
 {# work #}
-<div class="main-section" id="work-container">
-  <div id="work" class="flex-center">
-    <div class="work-wrapper flex-start full-width">
-      <p>
-        <span class="inline-header black">Work &rarr;</span>&nbsp; <span class="filter-category">All categories</span>&nbsp; / &nbsp;
-        {%- set allCategories = [] -%}
-
-        {%- for project in collections.project -%}
-          {%- for category in project.data.categories -%}
-            {%- if category not in allCategories -%}
-              {%- set allCategories = allCategories.concat([category]) -%}
-            {%- endif -%}
-          {%- endfor -%}
-        {%- endfor -%}
-
-        {%- for category in allCategories | sort -%}
-          <span class="filter-category">{{category | capitalize}}</span>
-          {%- if not loop.last -%}
-            &nbsp; / &nbsp;
-          {%- endif -%}
-        {%- endfor -%}
-        <br>
-        <span class="filter-category">All years</span>&nbsp; / &nbsp;
-        {%- set allYears = [] -%}
-
-        {%- for project in collections.project -%}
-          {%- if project.data.year not in allYears -%}
-            {%- set allYears = allYears.concat([project.data.year]) -%}
-          {%- endif -%}
-        {%- endfor -%}
-
-        {%- for year in allYears | sort | reverse -%}
-          <span class="filter-category">{{ year }}</span>
-          {%- if not loop.last -%}
-            &nbsp; / &nbsp;
-          {%- endif -%}
-        {%- endfor -%}
-      </p>
-    </div>
-  </div>
-</div>
+{% include "work.njk" %}
 
 {# projects #}
-<div id="projects-container" class="main-section flex-center">
-
-  <div class="projects-wrapper">
-
-    {%- for project in collections.project | reverse -%}
-      <div class="col-{{project.data.size}} pr-card">
-        <a href="{{project.url}}">
-          <img class="pr-pic" src="projects/{{project.fileSlug}}/assets/{{project.data.thumbnail}}.webp" alt="{{project.data.imageAlt}}">
-          <div class= "pr-body">
-            <h2>{{ project.data.title }}</h2>
-            <p class="pr-subtitle">{{ project.data.subtitle }}</p>
-            <p class="pr-info">{{ project.data.info }}, {{ project.data.year }}</p>
-          </div>
-        </a>
-        <p class="pr-categories">
-          {%- for category in project.data.categories -%}
-            <span>{{category | capitalize}}</span>
-            {%- if not loop.last -%}
-              &nbsp; / &nbsp;
-            {%- endif -%}
-          {%- endfor -%}
-        </p>
-
-        {# Lookup the page size #}
-        {% set lookupKey = project.url.slice(1) ~ 'index.html' %}
-        <p class="pr-info">{{ siteSize.pageSizes[lookupKey] or 'Unknown' }} KB</p>
-
-      </div>
-    {%- endfor -%}
-
-  </div>
-
-</div>
+{% include "projects.njk" %}

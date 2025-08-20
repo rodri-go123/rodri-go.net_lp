@@ -1,5 +1,5 @@
 ---
-layout: projects.njk
+layout: page_projects.njk
 title: Other Tiny Project
 subtitle: I like turtles
 info: Sculpture
