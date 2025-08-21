@@ -9,6 +9,31 @@ import markdownItAttrs from "markdown-it-attrs";
 
 
 export default function (eleventyConfig) {
+
+	// create categories collection
+	eleventyConfig.addCollection("categoriesList", (collectionApi) => {
+		const categories = new Set();
+		collectionApi.getFilteredByTag("project").forEach((project) => {
+		if (project.data.categories) {
+			project.data.categories.forEach((cat) => categories.add(cat));
+		}
+		});
+		return [...categories];
+  	});
+
+	// create year collection
+	eleventyConfig.addCollection("yearsList", (collectionApi) => {
+		const years = new Set();
+		collectionApi.getFilteredByTag("project").forEach((project) => {
+		if (project.data.year) {
+			years.add((project.data.year));
+		}
+		});
+		return [...years];
+  	});
+
+
+	// compile SCSS files
 	eleventyConfig.addWatchTarget("./public/*.scss");
 	eleventyConfig.addTemplateFormats("scss");
 
@@ -18,6 +43,17 @@ export default function (eleventyConfig) {
 			let result = sass.compileString(inputContent);
 			return async () => result.css;
 		},
+	});
+
+	// custom njk filters
+
+	// get last segment of a URL
+	eleventyConfig.addFilter("lastSegment", (url) => {
+		if (!url) return "";
+		// strip trailing slash if present
+		let cleaned = url.replace(/\/$/, "");
+		// split and return the last part
+		return cleaned.split("/").pop();
 	});
 
 	// custom mardown parsing
