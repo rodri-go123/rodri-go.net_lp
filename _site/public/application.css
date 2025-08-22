@@ -49,6 +49,7 @@ html {
   padding-top: var(--spacer);
 }
 
+/* Display */
 .flex-center {
   display: flex;
   justify-content: center;
@@ -60,15 +61,27 @@ html {
   justify-content: flex-start;
 }
 
-.inline-header {
-  font-size: 1.3rem;
+/* Text */
+h1, h2, h3 {
+  font-weight: 500;
 }
 
-.black {
-  color: var(--black-grey);
+h2 {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.inline-header {
+  font-size: 1.3rem;
 }
 
 .active {
   text-decoration: underline !important;
   color: var(--purple-blue) !important;
+}
+
+/* Colours */
+.black {
+  color: var(--black-grey);
 }
