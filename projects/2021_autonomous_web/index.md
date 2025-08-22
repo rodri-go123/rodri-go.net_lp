@@ -51,6 +51,6 @@ the next image should be small
 last one has no class 
 
 ![alt text](assets/aw5.jpg)
-seeing if this is in the same p as the image
+<em>seeing if this is in the same p as the image</em>
 
 another paragraph
