@@ -10,27 +10,61 @@ import markdownItAttrs from "markdown-it-attrs";
 
 export default function (eleventyConfig) {
 
-	// create categories collection
-	eleventyConfig.addCollection("categoriesList", (collectionApi) => {
-		const categories = new Set();
-		collectionApi.getFilteredByTag("project").forEach((project) => {
-		if (project.data.categories) {
-			project.data.categories.forEach((cat) => categories.add(cat));
-		}
+	// create collections for filtering
+
+	// sort projects by date, newest fist
+	eleventyConfig.addCollection("sortedProjects", (collectionApi) => {
+		return collectionApi.getFilteredByTag("project").sort((a, b) => {
+		return b.date - a.date;
 		});
-		return [...categories];
   	});
 
-	// create year collection
+	// Projects by category, sorted by date
+	eleventyConfig.addCollection("projectsByCategory", (collectionApi) => {
+		const map = {};
+		collectionApi.getFilteredByTag("project").forEach((project) => {
+		(project.data.categories || []).forEach((cat) => {
+			if (!map[cat]) map[cat] = [];
+			map[cat].push(project);
+		});
+		});
+		for (const cat in map) {
+		map[cat].sort((a, b) => b.date - a.date);
+		}
+		return map;
+	});
+
+	// Projects by year, sorted by date
+	eleventyConfig.addCollection("projectsByYear", (collectionApi) => {
+		const map = {};
+		collectionApi.getFilteredByTag("project").forEach((project) => {
+		const year = project.data.year;
+		if (!map[year]) map[year] = [];
+		map[year].push(project);
+		});
+		for (const year in map) {
+		map[year].sort((a, b) => b.date - a.date);
+		}
+		return map;
+	});
+
+	// All years list, sorted descending
 	eleventyConfig.addCollection("yearsList", (collectionApi) => {
 		const years = new Set();
 		collectionApi.getFilteredByTag("project").forEach((project) => {
-		if (project.data.year) {
-			years.add((project.data.year));
-		}
+		if (project.data.year) years.add(project.data.year);
 		});
-		return [...years];
-  	});
+		return [...years].sort((a, b) => b - a);
+	});
+
+	// All categories list
+	eleventyConfig.addCollection("categoriesList", (collectionApi) => {
+		const categories = new Set();
+		collectionApi.getFilteredByTag("project").forEach((project) => {
+		(project.data.categories || []).forEach((cat) => categories.add(cat));
+		});
+		return [...categories];
+	});
 
 
 	// compile SCSS files

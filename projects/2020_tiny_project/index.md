@@ -4,6 +4,7 @@ title: Other Tiny Project
 subtitle: I like turtles
 info: Sculpture
 year: 2020
+date: 2020-03-23
 thumbnail: turtolini
 imageAlt: colourful painting
 size: small

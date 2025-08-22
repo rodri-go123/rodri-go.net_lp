@@ -1,0 +1,22 @@
+<div class="col-{{project.data.size}} pr-card">
+  <a href="{{project.url}}">
+    <img class="pr-pic" src="/projects/{{project.fileSlug}}/assets/{{project.data.thumbnail}}.webp" alt="{{project.data.imageAlt}}">
+    <div class= "pr-body">
+      <h2>{{ project.data.title }}</h2>
+      <p class="pr-subtitle">{{ project.data.subtitle }}</p>
+      <p class="pr-info">{{ project.data.info }}, {{ project.data.year }}</p>
+    </div>
+  </a>
+  <p class="pr-categories">
+    {%- for category in project.data.categories -%}
+      <span>{{category | capitalize}}</span>
+      {%- if not loop.last -%}
+        &nbsp; / &nbsp;
+      {%- endif -%}
+    {%- endfor -%}
+  </p>
+
+  {# Lookup the page size #}
+  {% set lookupKey = project.url.slice(1) ~ 'index.html' %}
+  <p class="pr-info">{{ siteSize.pageSizes[lookupKey] or 'Unknown' }} KB</p>
+</div>

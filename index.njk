@@ -6,6 +6,12 @@ css:
   - /public/_work.css
   - /public/_project_cards.css
   - /public/_projects_grid.css
+pagination:
+  data: collections.project
+  size: 12
+  alias: projects
+  reverse: true
+permalink: "{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
 {# about #}
@@ -15,5 +21,7 @@ css:
 {% include "work.njk" %}
 
 {# projects #}
-{% set projects = collections.project %}
-{% include "projects.njk" %}
+{% include "projects-index.njk" %}
+
+{# pagination #}
+{% include "pagination.njk" %}

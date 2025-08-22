@@ -1,0 +1,19 @@
+<div id="pagination-container" class="main-section flex-center">
+    <div class="pagination-wrapper">
+        {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}">&larr; Previous</a>
+        {% endif %}
+
+        {% for pageEntry in pagination.pages %}
+        <a href="{{ pagination.hrefs[loop.index0] }}"
+            class="{% if pagination.pageNumber == loop.index0 %}active{% endif %}">
+            {{ loop.index }}
+        </a>
+        {% endfor %}
+
+        {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}">Next &rarr;</a>
+        {% endif %}
+    </div>
+</div>
+

@@ -14,14 +14,6 @@ permalink: "/years/{{ year | slug }}/index.html"
 {# work #}
 {% include "work.njk" %}
 
-{% set filtered = [] %}
-
-{% for project in collections.project %}
-  {% if project.data.year == year %}
-    {% set filtered = filtered.concat([project]) %}
-  {% endif %}
-{% endfor %}
-
 {# projects #}
-{% set projects = filtered %}
-{% include "projects.njk" %}
+{% set projects = collections.projectsByYears[year] %}
+{% include "projects-index.njk" %}
