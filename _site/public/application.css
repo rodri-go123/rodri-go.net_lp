@@ -33,10 +33,16 @@ html {
   scroll-padding-top: 80px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #main {
   flex: 1;
 }
 
+/* Widths, paddings & margins */
 .main-section {
   width: 100%;
 }
@@ -47,6 +53,14 @@ html {
 
 .less-padding-top {
   padding-top: var(--spacer);
+}
+
+.m-bottom-big {
+  margin-bottom: calc(var(--spacer) * 2);
+}
+
+.m-right {
+  margin-right: var(--spacer);
 }
 
 /* Display */
