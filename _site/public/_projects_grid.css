@@ -46,6 +46,7 @@
 
 .pagination-wrapper a:hover {
   color: var(--purple-blue);
+  border-bottom: 1px solid var(--purple-blue);
 }
 
 .current-page {

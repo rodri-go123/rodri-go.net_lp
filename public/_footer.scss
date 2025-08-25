@@ -7,21 +7,20 @@
   border-bottom: 6px solid var(--purple-blue);
 }
 
-.footer-container {
+.foot-wrapper {
   display: flex;
   justify-content: space-between;
-  // width: var(--page-width);
-
-  // font-family: "degular", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-style: normal;
   font-weight: 500;
   color: white;
 }
 
-.footer-items {
-  display: flex;
-  justify-content: center;
-  gap: 56px;
+.foot-left, .foot-right {
   margin-top: 6px;
+  gap: 24px;
+}
+
+.foot-wrapper a:hover {
+  text-decoration: underline;
 }
