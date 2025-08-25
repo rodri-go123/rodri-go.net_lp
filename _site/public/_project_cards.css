@@ -1,5 +1,5 @@
 .pr-card a:hover {
-  --hover-color: #4848D3;
+  --hover-color: var(--purple-blue);
 }
 
 .pr-pic {
@@ -13,6 +13,7 @@
 
 .pr-body h2 {
   margin: 0;
+  font-size: 1.6rem;
 }
 
 .pr-body {
@@ -21,25 +22,32 @@
   line-height: 120%;
 }
 
-.pr-description {
-  font-size: 16px;
+.pr-subtitle {
+  font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
 .pr-info {
-  font-size: 1rem;
+  font-size: 0.8rem;
   opacity: 0.65;
   margin-top: 10px;
 }
 
 .pr-categories {
   color: var(--purple-blue);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-style: normal;
-  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.pr-categories span {
+  padding: 6px 9px 5px 9px;
+  background-color: rgba(72, 72, 211, 0.0666666667);
+  letter-spacing: 0.03rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .pr-categories span:hover {
-  text-decoration: underline;
   cursor: pointer;
+  background-color: rgba(72, 72, 211, 0.137254902);
 }

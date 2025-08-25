@@ -3,7 +3,7 @@
   --purple-blue: #4848D3;
   --truck-red: #DF2E38;
   --spacer: 24px;
-  --page-width: 1060px;
+  --page-width: 1160px;
   --border-width: 1.5px;
   --hover-color: #4848d300;
 }
@@ -91,6 +91,7 @@ h2 {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
+  letter-spacing: 0.8px;
 }
 
 .inline-header {
@@ -106,4 +107,55 @@ h2 {
 
 .black{
   color: var(--black-grey);
+}
+
+/* Media Queries */
+
+/* Monitors, large laptops */
+@media (width >= 1500px) {
+
+  :root {
+    --page-width: 1360px;
+  }
+
+}
+
+/* Laptop, minimised */
+@media (width <= 1250px) {
+
+  :root {
+    --page-width: 1060px;
+  }
+
+}
+
+@media (width <= 1150px) {
+
+  :root {
+    --page-width: 960px;
+  }
+
+}
+
+@media (width <= 1050px) {
+
+  :root {
+    --page-width: 860px;
+  }
+
+}
+
+/* Vertical layouts */
+
+@media (width <= 950px) {
+
+  :root {
+    --page-width: 95vw;
+    /* make pw around 95% */
+  }
+
+  /* nav fonts smaller */
+  /* about font smaller */
+  /* project grid 2 col */
+
 }

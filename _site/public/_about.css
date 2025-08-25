@@ -16,6 +16,7 @@
   font-size: 1.1rem;
   /* margin-right: 25.5660377358%; */
   width: 74.4339622642%;
+  max-width: 940px;
   margin-right: var(--spacer);
   font-weight: 400;
   line-height: 120%;

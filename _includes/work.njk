@@ -1,8 +1,9 @@
 <div class="main-section" id="work-container">
   <div id="work" class="flex-center">
     <div class="work-wrapper flex-start full-width">
+      <h2>Work &#8623;</h2>
       <p>
-        <span class="inline-header black">Work &rarr;</span>&nbsp; <span class="filter-category {% if page.url == '/' %}active{% endif %}"><a href="/#work">All categories</a></span>&nbsp; / &nbsp;
+        <span class="filter-category {% if page.url == '/' %}active{% endif %}"><a href="/#work">All categories</a></span>&nbsp;
         {%- set allCategories = [] -%}
         {% set lastSegment = page.url | lastSegment %}
 
@@ -17,11 +18,13 @@
         {%- for category in allCategories | sort -%}
           <span class="filter-category {% if lastSegment | capitalize == category %}active{% endif %}"><a href="/categories/{{ category | slug }}/">{{category | capitalize}}</a></span>
           {%- if not loop.last -%}
-            &nbsp; / &nbsp;
+            &nbsp;
           {%- endif -%}
         {%- endfor -%}
-        <br>
-        <span class="filter-category"><a href="/#work">All years</a></span>&nbsp; / &nbsp;
+      </p>
+
+      <p>
+        <span class="filter-category"><a href="/#work">All years</a></span>&nbsp;
         {%- set allYears = [] -%}
 
         {%- for project in collections.project -%}
@@ -33,7 +36,7 @@
         {%- for year in allYears | sort | reverse -%}
           <span class="filter-category {% if lastSegment | capitalize == year %}active{% endif %}"><a href="/years/{{ year | slug }}/">{{year}}</a></span>
           {%- if not loop.last -%}
-            &nbsp; / &nbsp;
+            &nbsp;
           {%- endif -%}
         {%- endfor -%}
       </p>
