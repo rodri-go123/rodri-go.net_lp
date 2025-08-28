@@ -4,8 +4,7 @@
 }
 
 .project-page-wrapper {
-  padding-bottom: var(--spacer);
-  margin-bottom: calc(var(--spacer) * 2);
+  margin-bottom: var(--spacer);
 }
 
 .project-page-wrapper img {
@@ -14,6 +13,7 @@
 
 .project-head {
   margin-top: calc(var(--spacer)*3);
+  min-height: 30vw;
 }
 
 // margin-right basically
