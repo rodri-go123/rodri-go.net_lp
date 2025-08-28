@@ -2,7 +2,7 @@
   <div id="work" class="flex-center">
     <div class="work-wrapper flex-start full-width">
       <h2>
-        {% if page.url == '/' %}
+        {% if page.url == '/'  or page.url.startsWith('/page/') %}
           Work
         {% elif page.url.startsWith('/categories/') %}
           {{ category }}
@@ -12,7 +12,7 @@
         &#8623;
       </h2>
       <p>
-        <a href="/#work"><span class="tag tag--big {% if page.url == '/' %}tag--selected{% endif %}">All categories</span></a>&nbsp;
+        <a href="/#work"><span class="tag tag--big {% if page.url == '/' or page.url.startsWith('/page/') %}tag--selected{% endif %}">All categories</span></a>&nbsp;
         {%- set allCategories = [] -%}
         {% set lastSegment = page.url | lastSegment %}
 
@@ -33,7 +33,7 @@
       </p>
 
       <p>
-        <a href="/#work"><span class="tag tag--big {% if page.url == '/' %}tag--selected{% endif %}">All years</span></a>&nbsp;
+        <a href="/#work"><span class="tag tag--big {% if page.url == '/' or page.url.startsWith('/page/') %}tag--selected{% endif %}">All years</span></a>&nbsp;
         {%- set allYears = [] -%}
 
         {%- for project in collections.project -%}
