@@ -14,7 +14,6 @@
 
 .about-wrapper p {
   font-size: 1.1rem;
-  /* margin-right: 25.5660377358%; */
   width: 74.4339622642%;
   max-width: 940px;
   margin-right: var(--spacer);
@@ -25,22 +24,6 @@
 .about-wrapper a {
   color: var(--purple-blue);
   text-decoration: none;
-}
-
-.profile-pic {
-  width: 30%;
-  height: 440px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  object-fit: cover;
-  box-shadow: rgba(0, 0, 0, 0.14) -2px 0px 30px;
-}
-
-.vertical-profile-pic {
-  width: auto;
-  height: 320px;
-  object-fit: cover;
 }
 
 .read-more {

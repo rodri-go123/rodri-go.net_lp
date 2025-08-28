@@ -42,7 +42,6 @@ a {
   flex: 1;
 }
 
-/* Widths, paddings & margins */
 .main-section {
   width: 100%;
 }
@@ -63,7 +62,6 @@ a {
   margin-right: var(--spacer);
 }
 
-/* Display */
 .flex-center {
   display: flex;
   justify-content: center;
@@ -75,7 +73,6 @@ a {
   justify-content: flex-start;
 }
 
-/* Text */
 h1, h2, h3 {
   font-weight: 500;
 }
@@ -96,8 +93,6 @@ h2 {
   color: var(--purple-blue) !important;
 }
 
-/* Buttons & Tags */
-/* Base */
 .tag {
   color: var(--purple-blue);
   text-decoration: none;
@@ -110,7 +105,6 @@ h2 {
   background-color: rgba(72, 72, 211, 0.137254902);
 }
 
-/* Variations */
 .tag--big {
   padding: 8px 11px 7px 11px;
   font-size: 0.95rem;
@@ -123,7 +117,6 @@ h2 {
   letter-spacing: 0.03rem;
 }
 
-/* Selected state */
 .tag--selected {
   color: white;
   background-color: var(--purple-blue);
@@ -135,7 +128,6 @@ h2 {
   background-color: var(--purple-blue);
 }
 
-/* Colours */
 .black {
   color: var(--black-grey);
 }

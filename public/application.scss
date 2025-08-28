@@ -15,18 +15,17 @@ html, body {
   padding: 0;
   margin: 0;
 
-  // font-family: "aktiv-grotesk", sans-serif;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: var(--black-grey);
-
   letter-spacing: 0.1px;
-
 }
 
- /* Hide scrollbar for Chrome, Safari and Opera */
- html::-webkit-scrollbar {
+// this might be legacy, let's check later
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
   display: none;
 }
 
@@ -46,7 +45,7 @@ a {
   flex: 1;
 }
 
-/* Widths, paddings & margins */
+// Widths, paddings & margins //
 
 .main-section {
   width: 100%;
@@ -68,7 +67,7 @@ a {
   margin-right: var(--spacer);
 }
 
-/* Display */
+// Display //
 
 .flex-center{
   display: flex;
@@ -81,7 +80,7 @@ a {
   justify-content: flex-start;
 }
 
-/* Text */
+// Text //
 
 h1, h2, h3 {
   font-weight: 500;
@@ -103,9 +102,9 @@ h2 {
   color: var(--purple-blue) !important;
 }
 
-/* Buttons & Tags */
+// Buttons & Tags //
 
-/* Base */
+// Base //
 .tag {
   color: var(--purple-blue);
   text-decoration: none;
@@ -118,12 +117,7 @@ h2 {
   background-color: #4848d323;
 }
 
-// .tag a  {
-//   color: var(--purple-blue);
-//   text-decoration: none;
-// }
-
-/* Variations */
+// Variations //
 .tag--big {
   padding: 8px 11px 7px 11px; // top right bottom left
   font-size: 0.95rem;
@@ -136,7 +130,7 @@ h2 {
   letter-spacing: 0.03rem;
 }
 
-/* Selected state */
+// Selected state //
 
 .tag--selected {
   color: white;
@@ -149,16 +143,7 @@ h2 {
   background-color: var(--purple-blue);
 }
 
-
-// .tag--selected a {
-//   color: white;
-// }
-
-// .tag--selected:hover a {
-//   color: white
-//
-
-/* Colours */
+// Colours //
 
 .black{
   color: var(--black-grey);

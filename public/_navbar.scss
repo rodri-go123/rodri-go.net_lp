@@ -13,9 +13,12 @@
 }
 
 #navbar.scrolled {
-  // position: absolute;
-  // transform: translateY(-100%);
   top: -80px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 #navbar a {
@@ -35,74 +38,16 @@
 }
 
 .nav-right, .nav-left {
-  gap: 12px;
+  gap: 40px;
 }
 
 .nav-header {
   margin: 0;
 }
 
-.nav-header i {
-  font-size: 20px;
-  margin-left: 2px;
-}
-
 .nav-btn {
   display: inline;
-  height: 24px;
-  padding: 8px 14px 4px 14px;
-  margin-top: 4px;
-
+  margin-top: 2px;
   font-size: 1.15rem;
-  // font-family: "degular", sans-serif;
-  font-weight: 500;
-
-  border-radius: 150px;
-  // transition: all 0.3s ease-in-out;
-
   letter-spacing: 1px;
-}
-
-.nav-btn.work:hover {
-  background-color: #dbddff87;
-  cursor: pointer;
-  color: var(--purple-blue);
-}
-
-.nav-btn.about:hover {
-  cursor: pointer;
-  text-decoration: underline;
-  color: var(--purple-blue);
-}
-
-.nav-btn.contact:hover {
-  cursor: pointer;
-  text-decoration: underline;
-  color: var(--truck-red);
-}
-
-.nav-btn.blog:hover {
-  cursor: pointer;
-  text-decoration: underline;
-  color: var(--black-grey);
-}
-
-.dropdown i {
-  font-size: 14px;
-  vertical-align: -1px
-}
-
-.btn-active {
-  color: white;
-  background-color: var(--purple-blue);
-  border-color: var(--purple-blue);
-}
-
-.btn-active:hover {
-  color: white;
-}
-
-.nav-wrapper {
-  display: flex;
-  justify-content: space-between;
 }

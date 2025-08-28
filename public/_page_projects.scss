@@ -68,6 +68,8 @@
   cursor: pointer;
 }
 
+// sizes for images in project body
+
 .extra-large {
   width: var(--page-width);
 }
@@ -83,6 +85,8 @@
 .small {
   width: 50%;
 }
+
+// image captions
 
 em {
   font-size: 0.9rem;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #projects-container {
   padding-top: var(--spacer);
   position: relative;
@@ -8,12 +9,15 @@
   position: relative;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 23.3018867925% 23.3018867925% 23.3018867925% 23.3018867925%;
-  grid-auto-rows: auto;
-  gap: 24px 24px;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 24px;
   width: var(--page-width);
-  height: auto;
-  margin-bottom: var(--spacer);
+  margin: 0 auto var(--spacer); /* centered */
+  box-sizing: border-box; /* makes sure padding/borders don’t add width */
+}
+
+.projects-wrapper * {
+  box-sizing: border-box;
 }
 
 .col-large {

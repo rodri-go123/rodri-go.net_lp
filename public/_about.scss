@@ -1,6 +1,4 @@
 #about-container {
-  // position: fixed;
-  // top: 0;
   margin-top: 25px;
 }
 
@@ -9,7 +7,6 @@
 }
 
 #about-header {
-// font-family: "degular", sans-serif;
 font-weight: 500;
 font-style: normal;
 font-size: 26px;
@@ -17,12 +14,9 @@ font-size: 26px;
 
 .about-wrapper p {
   font-size: 1.1rem;
-  // color: var(--purple-blue);
-  /* margin-right: 25.5660377358%; */
   width: 74.4339622642%;
   max-width: 940px;
   margin-right: var(--spacer);
-  // margin-top: calc(var(--spacer)*2);
   font-weight: 400;
   line-height: 120%;
 }
@@ -30,24 +24,6 @@ font-size: 26px;
 .about-wrapper a {
   color: var(--purple-blue);
   text-decoration: none;
-  // transition: all 0.3s ease-in-out;
-}
-
-.profile-pic {
-  width: 30%;
-  height: 440px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  object-fit: cover;
-  box-shadow: rgba(0, 0, 0, 0.14) -2px 0px 30px;
-
-}
-
-.vertical-profile-pic {
-  width: auto;
-  height: 320px;
-  object-fit: cover;
 }
 
 .read-more {
