@@ -103,6 +103,61 @@ h2 {
   color: var(--purple-blue) !important;
 }
 
+/* Buttons & Tags */
+
+/* Base */
+.tag {
+  color: var(--purple-blue);
+  text-decoration: none;
+  background-color: #4848d311;
+  transition: all 0.2s ease-in-out;
+}
+
+.tag:hover {
+  cursor: pointer;
+  background-color: #4848d323;
+}
+
+// .tag a  {
+//   color: var(--purple-blue);
+//   text-decoration: none;
+// }
+
+/* Variations */
+.tag--big {
+  padding: 8px 11px 7px 11px; // top right bottom left
+  font-size: 0.95rem;
+  letter-spacing: 0.04rem;
+}
+
+.tag--small {
+  padding: 6px 9px 5px 9px; // top right bottom left
+  font-size: 0.8rem;
+  letter-spacing: 0.03rem;
+}
+
+/* Selected state */
+
+.tag--selected {
+  color: white;
+  background-color: var(--purple-blue);
+  border-radius: 50px;
+}
+
+.tag--selected:hover {
+  color: white;
+  background-color: var(--purple-blue);
+}
+
+
+// .tag--selected a {
+//   color: white;
+// }
+
+// .tag--selected:hover a {
+//   color: white
+//
+
 /* Colours */
 
 .black{

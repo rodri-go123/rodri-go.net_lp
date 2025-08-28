@@ -14,9 +14,9 @@ css:
       <p class="pr-page-categories">
 
         {%- for category in categories -%}
-          <span>{{ category | capitalize }}</span>
+          <a href="/categories/{{ category | slug }}/"><span class="tag tag--big">{{ category | capitalize }}</span></a>
           {%- if not loop.last -%}
-              &nbsp; / &nbsp;
+              &nbsp;
             {%- endif -%}
         {%- endfor -%}
 

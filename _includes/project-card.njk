@@ -9,7 +9,7 @@
   </a>
   <p class="pr-categories">
     {%- for category in project.data.categories -%}
-      <span>{{category | capitalize}}</span>
+      <a href="/categories/{{ category | slug }}/"><span class="tag tag--small">{{category | capitalize}}</span></a>
       {%- if not loop.last -%}
         &nbsp;
       {%- endif -%}

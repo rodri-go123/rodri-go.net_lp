@@ -1,9 +1,18 @@
 <div class="main-section" id="work-container">
   <div id="work" class="flex-center">
     <div class="work-wrapper flex-start full-width">
-      <h2>Work &#8623;</h2>
+      <h2>
+        {% if page.url == '/' %}
+          Work
+        {% elif page.url.startsWith('/categories/') %}
+          {{ category }}
+        {% elif page.url.startsWith('/years/') %}
+          {{ year }}
+        {% endif %}
+        &#8623;
+      </h2>
       <p>
-        <span class="filter-category {% if page.url == '/' %}active{% endif %}"><a href="/#work">All categories</a></span>&nbsp;
+        <a href="/#work"><span class="tag tag--big {% if page.url == '/' %}tag--selected{% endif %}">All categories</span></a>&nbsp;
         {%- set allCategories = [] -%}
         {% set lastSegment = page.url | lastSegment %}
 
@@ -16,7 +25,7 @@
         {%- endfor -%}
 
         {%- for category in allCategories | sort -%}
-          <span class="filter-category {% if lastSegment | capitalize == category %}active{% endif %}"><a href="/categories/{{ category | slug }}/">{{category | capitalize}}</a></span>
+          <a href="/categories/{{ category | slug }}/"><span class="tag tag--big {% if lastSegment | capitalize == category %}tag--selected{% endif %}">{{category | capitalize}}</span></a>
           {%- if not loop.last -%}
             &nbsp;
           {%- endif -%}
@@ -24,7 +33,7 @@
       </p>
 
       <p>
-        <span class="filter-category"><a href="/#work">All years</a></span>&nbsp;
+        <a href="/#work"><span class="tag tag--big {% if page.url == '/' %}tag--selected{% endif %}">All years</span></a>&nbsp;
         {%- set allYears = [] -%}
 
         {%- for project in collections.project -%}
@@ -34,7 +43,7 @@
         {%- endfor -%}
 
         {%- for year in allYears | sort | reverse -%}
-          <span class="filter-category {% if lastSegment | capitalize == year %}active{% endif %}"><a href="/years/{{ year | slug }}/">{{year}}</a></span>
+          <a href="/years/{{ year | slug }}/"><span class="tag tag--big {% if lastSegment | capitalize == year %}tag--selected{% endif %}">{{year}}</span></a>
           {%- if not loop.last -%}
             &nbsp;
           {%- endif -%}

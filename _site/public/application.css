@@ -96,6 +96,45 @@ h2 {
   color: var(--purple-blue) !important;
 }
 
+/* Buttons & Tags */
+/* Base */
+.tag {
+  color: var(--purple-blue);
+  text-decoration: none;
+  background-color: rgba(72, 72, 211, 0.0666666667);
+  transition: all 0.2s ease-in-out;
+}
+
+.tag:hover {
+  cursor: pointer;
+  background-color: rgba(72, 72, 211, 0.137254902);
+}
+
+/* Variations */
+.tag--big {
+  padding: 8px 11px 7px 11px;
+  font-size: 0.95rem;
+  letter-spacing: 0.04rem;
+}
+
+.tag--small {
+  padding: 6px 9px 5px 9px;
+  font-size: 0.8rem;
+  letter-spacing: 0.03rem;
+}
+
+/* Selected state */
+.tag--selected {
+  color: white;
+  background-color: var(--purple-blue);
+  border-radius: 50px;
+}
+
+.tag--selected:hover {
+  color: white;
+  background-color: var(--purple-blue);
+}
+
 /* Colours */
 .black {
   color: var(--black-grey);

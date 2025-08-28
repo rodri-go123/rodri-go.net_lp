@@ -15,5 +15,5 @@ permalink: "/years/{{ year | slug }}/index.html"
 {% include "work.njk" %}
 
 {# projects #}
-{% set projects = collections.projectsByYears[year] %}
+{% set projects = collections.projectsByYear[year] %}
 {% include "projects-index.njk" %}
