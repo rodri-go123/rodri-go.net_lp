@@ -6,6 +6,7 @@
   --page-width: 1160px;
   --border-width: 1.5px;
   --hover-color: #4848d300;
+  --vert-layout-break: 950px;
 }
 
 html, body {
@@ -14,12 +15,14 @@ html, body {
   flex-direction: column;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   color: var(--black-grey);
   letter-spacing: 0.1px;
+  hyphens: auto;
 }
 
 // this might be legacy, let's check later
@@ -84,6 +87,7 @@ a {
 
 h1, h2, h3 {
   font-weight: 500;
+  hyphens: none;
 }
 
 h2 {
@@ -110,6 +114,9 @@ h2 {
   text-decoration: none;
   background-color: #4848d311;
   transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
 .tag:hover {
@@ -185,17 +192,12 @@ h2 {
 
 }
 
-/* Vertical layouts */
+// Vertical layouts //
 
 @media (width <= 950px) {
 
   :root {
-    --page-width: 95vw;
-    /* make pw around 95% */
+    --page-width: 92vw;
   }
-
-  /* nav fonts smaller */
-  /* about font smaller */
-  /* project grid 2 col */
 
 }

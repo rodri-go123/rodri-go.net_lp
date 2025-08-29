@@ -19,8 +19,48 @@
 .work-wrapper p {
   width: 100%;
   margin-right: var(--spacer);
-  line-height: 180%;
   margin-top: 0;
-  margin-bottom: 7.5px;
+  margin-bottom: 0;
 }
 
+// Media queries
+
+/* Vertical layouts */
+
+@media (width <= 950px) {
+
+  .work-wrapper p {
+    position: relative;
+    display: flex;              
+    flex-wrap: nowrap;           
+    overflow-x: auto;            
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    // hide scrollbar
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+    // snap scrolling
+    scroll-snap-type: x mandatory;
+  }
+
+  .work-wrapper p::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+  }
+
+  .work-wrapper p .tag {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  // gradient fade on right side
+  .work-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;  /* adjust as needed */
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to right, transparent, white);
+  }
+
+}

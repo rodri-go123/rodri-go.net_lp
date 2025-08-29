@@ -19,6 +19,7 @@ font-size: 26px;
   margin-right: var(--spacer);
   font-weight: 400;
   line-height: 120%;
+  margin-bottom: 0;
 }
 
 .about-wrapper a {
@@ -47,4 +48,21 @@ font-size: 26px;
 .read-more-arrow {
   font-size: 1.3rem;
   font-weight: bolder;
+}
+
+// Media queries
+
+/* Vertical layouts */
+
+@media (width <= 950px) {
+
+  .about-wrapper p {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .read-more {
+    font-size: 0.7rem;
+  }
+
 }

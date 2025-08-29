@@ -5,10 +5,7 @@
 
 .project-page-wrapper {
   margin-bottom: var(--spacer);
-}
-
-.project-page-wrapper img {
-  max-width: var(--page-width);
+  position: relative;
 }
 
 .project-head {
@@ -32,7 +29,8 @@
   height: auto;
   position: absolute;
   right: 0;
-  top: 73px;
+  top: 0px;
+  max-width: var(--page-width);
 }
 
 .pr-page-title {
@@ -91,4 +89,52 @@
 em {
   font-size: 0.9rem;
   opacity: 0.6;
+}
+
+// Media queries
+
+// Vertical layouts //
+
+@media (width <= 950px) {
+
+  .project-page-wrapper {
+    flex-direction: column;
+  }
+
+  .pr-header-pic {
+    width: 100vw;
+    max-width: 100vw;
+    position: relative;
+    top: 0;
+  }
+
+  .project-head {
+    margin-top: var(--spacer);
+  }
+
+  .project-head h1, .project-head p {
+    width: 100%;
+  }
+
+  .pr-page-title {
+    font-size: 2.5rem;
+  }
+
+  .project-body p {
+    width: 100%;
+  }
+
+  .extra-large {
+    width: 100vw;
+    margin-left: -4vw;
+  }
+
+  .medium {
+  width: 80%;
+}
+
+  .small {
+    width: 66%;
+  }
+
 }

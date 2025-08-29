@@ -10,6 +10,12 @@ import markdownItAttrs from "markdown-it-attrs";
 
 export default function (eleventyConfig) {
 
+	// run local server
+	  eleventyConfig.setServerOptions({
+		port: 8080,         // or your desired port
+		showAllHosts: true  // allow access from local network
+	});
+
 	// create collections for filtering
 
 	// sort projects by date, newest fist

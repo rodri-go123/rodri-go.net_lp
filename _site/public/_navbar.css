@@ -51,3 +51,28 @@
   font-size: 1.15rem;
   letter-spacing: 1px;
 }
+
+/* Vertical layouts */
+@media (width <= 950px) {
+  #navbar {
+    height: fit-content;
+    position: relative;
+  }
+  #navbar h1 {
+    font-size: 1.25rem;
+  }
+  .nav-wrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .nav-left, .nav-right {
+    justify-content: start !important;
+  }
+  .nav-right {
+    gap: 5%;
+  }
+  .nav-btn {
+    font-size: 1.1rem;
+    text-decoration: underline !important;
+  }
+}

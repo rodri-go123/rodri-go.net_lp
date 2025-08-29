@@ -8,3 +8,15 @@
   width: 65%;
   line-height: 130%;
 }
+
+// Media queries
+
+/* Vertical layouts */
+
+@media (width <= 950px) {
+
+  .about-contact-body p {
+    width: 100%;
+  }
+
+}

@@ -56,3 +56,19 @@
   color: var(--purple-blue);
   border-bottom: 1px solid rgb(208, 208, 208);
 }
+
+// Media queries
+
+/* Vertical layouts */
+
+@media (width <= 950px) {
+
+  .projects-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .col-large, .col-small {
+    grid-column: span 2; /* full width across both cols */
+  }
+
+}
