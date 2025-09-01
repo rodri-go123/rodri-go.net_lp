@@ -106,9 +106,13 @@ h2 {
   color: var(--purple-blue) !important;
 }
 
+.active::after {
+  content: " ↯";
+}
+
 // Buttons & Tags //
 
-// Base //
+// Base //.  
 .tag {
   color: var(--purple-blue);
   text-decoration: none;
@@ -156,9 +160,9 @@ h2 {
   color: var(--black-grey);
 }
 
-/* Media Queries */
+// Media Queries //
 
-/* Monitors, large laptops */
+// Monitors, large laptops //
 @media (width >= 1500px) {
 
   :root {

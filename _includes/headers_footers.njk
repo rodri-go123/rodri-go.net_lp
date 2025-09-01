@@ -29,11 +29,10 @@ css:
       <div class="nav-wrapper full-width">
         <div class="nav-left flex-center"><h1 class="nav-header"><a href="/">rodri-go.net</a></h1></div>
         <div class="nav-right flex-center">
-          <a href="{% if page.url == '/' %}#work{% else %}/#work{% endif %}" class="nav-btn {% if page.url == '/' %}active{% endif %}">Work &#8623;</a>
+          <a href="{% if page.url == '/' %}#work{% else %}/#work{% endif %}" class="nav-btn {% if page.url == '/' %}active{% endif %}">Work</a>
           <a href="/about" class="nav-btn about {% if page.fileSlug == 'about' %}active{% endif %}">About</a>
           <a href="/contact" class="nav-btn contact {% if page.fileSlug == 'contact' %}active{% endif %}">Contact</a>
           <a href="/blog" class="nav-btn blog {% if page.fileSlug == 'blog' %}active{% endif %}">Blog</a>
-        </div>
       </div>
     </nav>
 
