@@ -3,19 +3,27 @@
   padding-bottom: 4px;
 }
 
+#project-head {
+  height: 33.1vw;
+}
+
 .project-page-wrapper {
-  margin-bottom: var(--spacer);
+  margin-bottom: calc(var(--spacer)*1.5);
   position: relative;
 }
 
-.project-head {
-  margin-top: calc(var(--spacer)*3);
-  min-height: 30vw;
-}
+// .project-head {
+//   margin-top: calc(var(--spacer)*3);
+//   min-height: 32vw;
+// }
 
 // margin-right basically
-.project-head > h1, .project-head > p{
+.project-head > h1, .project-head > h2, .project-head > p{
   width: 46%;
+}
+
+.project-page-wrapper h2 {
+  line-height: 130%;
 }
 
 .project-body p {
@@ -24,13 +32,30 @@
   line-height: 130%;
 }
 
+.project-body h1, .project-body h2, .project-body h3 {
+  width: 65%;
+}
+
+.project-body figure {
+  margin: calc(var(--spacer)*1.5) 0;
+}
+
 .pr-header-pic {
   width: 50%;
-  height: auto;
+  height: 33.1vw;
   position: absolute;
   right: 0;
   top: 0px;
   max-width: var(--page-width);
+  max-height: 35vw;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+}
+
+.pr-header-pic img {
+  height: 100%;
+  object-fit: contain;
 }
 
 .pr-page-title {
@@ -38,10 +63,10 @@
   font-weight: normal;
 }
 
-.pr-page-subtitle {
-  font-size: 1.4rem;
-  line-height: 120%;
-}
+// .pr-page-subtitle {
+//   font-size: 1.4rem;
+//   line-height: 120%;
+// }
 
 .pr-page-info {
   font-size: 1.2rem;
@@ -68,27 +93,33 @@
 
 // sizes for images in project body
 
-.extra-large {
+figure .extra-large {
   width: var(--page-width);
 }
 
-.large {
-  width: 100%;
+figure .large {
+  width: 65%;
 }
 
-.medium {
-  width: 75%;
-}
-
-.small {
+figure .medium {
   width: 50%;
+}
+
+figure .small {
+  width: 35%;
 }
 
 // image captions
 
-em {
+figcaption {
   font-size: 0.9rem;
   opacity: 0.6;
+}
+
+// vimeo
+
+.vimeo {
+  margin: calc(var(--spacer)*1.5) 0;
 }
 
 // Media queries
@@ -124,16 +155,16 @@ em {
     width: 100%;
   }
 
-  .extra-large {
+  figure .extra-large {
     width: 100vw;
     margin-left: -4vw;
   }
 
-  .medium {
-  width: 80%;
-}
+  figure .medium {
+    width: 80%;
+  }
 
-  .small {
+  figure .small {
     width: 66%;
   }
 

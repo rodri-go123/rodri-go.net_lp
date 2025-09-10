@@ -5,7 +5,7 @@ import path from 'path';
 // add some extra fluff to the markdown
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
-
+import implicitFigures from "markdown-it-implicit-figures";
 
 
 export default function (eleventyConfig) {
@@ -101,15 +101,22 @@ export default function (eleventyConfig) {
 		"md",
 		markdownIt({ html: true })
 		.use(markdownItAttrs)
-		.use(function(md) {
-			const defaultRender = md.renderer.rules.image || function(tokens, idx, options, env, self) {
-			return self.renderToken(tokens, idx, options);
+		// use the image-figures plugin and tell it to use the image TITLE as the figcaption
+		.use(implicitFigures, {
+			figcaption: "title", // use the image "title" (the "..." part) for <figcaption>
+			copyAttrs: true,     // copy .class (from markdown-it-attrs) to the <figure>
+		})
+		.use(function (md) {
+			const defaultRender =
+			md.renderer.rules.image ||
+			function (tokens, idx, options, env, self) {
+				return self.renderToken(tokens, idx, options);
 			};
-			
-			// image parsing
-			md.renderer.rules.image = function(tokens, idx, options, env, self) {
-			let token = tokens[idx];
-			let srcIndex = token.attrIndex("src");
+
+			// your custom image rendering (assets/ prefix + .webp conversion)
+			md.renderer.rules.image = function (tokens, idx, options, env, self) {
+			const token = tokens[idx];
+			const srcIndex = token.attrIndex("src");
 
 			if (srcIndex >= 0) {
 				let src = token.attrs[srcIndex][1];
@@ -130,7 +137,7 @@ export default function (eleventyConfig) {
 			return defaultRender(tokens, idx, options, env, self);
 			};
 		})
-	);
+  	);
 
 	// Use compressed images in projects
 	eleventyConfig.addPassthroughCopy({

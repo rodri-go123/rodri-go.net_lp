@@ -13,6 +13,7 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "markdown-it-attrs": "^4.3.1",
+    "markdown-it-implicit-figures": "^0.12.0",
     "sass": "^1.86.0",
     "tree": "^0.1.3"
   }

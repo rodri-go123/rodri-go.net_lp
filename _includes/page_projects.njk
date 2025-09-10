@@ -6,11 +6,11 @@ css:
 ---
 <div class="project-page-container main-section">
   {# head #}
-  <div class="project-page-wrapper flex-center">
-    <img class="pr-header-pic" src="./assets/{{ thumbnail }}.webp" alt="{{ imageAlt }}">
+  <div id="project-head" class="project-page-wrapper flex-center">
+    <div class="pr-header-pic"><img src="./assets/{{ thumbnail }}.webp" alt="{{ imageAlt }}"></div>
     <div class="project-head full-width">
       <h1 class="pr-page-title">{{ title }}</h1>
-      <p class="pr-page-subtitle">{{ subtitle }}</p>
+      <h2 class="pr-page-subtitle">{{ subtitle }}</h2>
       <p class="pr-page-info">{{ info }}, {{year}}</p>
       <p class="pr-page-categories">
 

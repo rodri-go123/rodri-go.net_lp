@@ -7,7 +7,7 @@ year: 2021
 date: 2025-03-23
 thumbnail: aw1
 imageAlt: 3D render of a desk
-size: large
+size: medium
 categories: ["Research", "Design"]
 ---
 
