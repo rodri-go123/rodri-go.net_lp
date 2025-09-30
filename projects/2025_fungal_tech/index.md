@@ -19,9 +19,8 @@ year: 2025
 date: 2025-09-04
 
 # 🖼️ Main image (will display on the grid and at the top of the project page)
-# No need for file extension (i.e. image, NOT image.png)
 # ⚠️ Place your images in the 'assets' folder of their respective projects
-thumbnail: thumbnail
+thumbnail: thumbnail.webp
 
 # 💬 Image Alt Text / Describe the image in plain words
 imageAlt: A yellow title graphic overlayed on a photo of a tree trunk covered by wood-decaying fungi.

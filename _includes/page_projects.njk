@@ -7,7 +7,8 @@ css:
 <div class="project-page-container main-section">
   {# head #}
   <div id="project-head" class="project-page-wrapper flex-center">
-    <div class="pr-header-pic"><img src="./assets/{{ thumbnail }}.webp" alt="{{ imageAlt }}"></div>
+    <div class="pr-header-pic {% if imageClass %}{{ imageClass }}{% endif %}"><img src="./assets/{{ thumbnail }}" alt="{{ imageAlt }}"></div>
+
     <div class="project-head full-width">
       <h1 class="pr-page-title">{{ title }}</h1>
       <h2 class="pr-page-subtitle">{{ subtitle }}</h2>

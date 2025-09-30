@@ -1,6 +1,8 @@
 <div class="col-{{project.data.size}} pr-card">
   <a href="{{project.url}}">
-    <img class="pr-pic" src="/projects/{{project.fileSlug}}/assets/{{project.data.thumbnail}}.webp" alt="{{project.data.imageAlt}}">
+    <img class="pr-pic" 
+      src="/projects/{{ project.fileSlug }}/assets/{{ project.data.thumbnail }}"
+      alt="{{project.data.imageAlt}}">
     <div class= "pr-body">
       <h2>{{ project.data.title }}</h2>
       <p class="pr-subtitle">{{ project.data.subtitle }}</p>

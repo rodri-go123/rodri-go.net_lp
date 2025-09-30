@@ -1,4 +1,4 @@
---- 
+{# --- 
 title: rodri-go.net
 layout: headers_footers.njk
 css:
@@ -10,10 +10,10 @@ pagination:
   size: 1
   alias: year
 permalink: "/years/{{ year | slug }}/index.html"
----
+--- #}
 {# work #}
-{% include "work.njk" %}
+{# {% include "work.njk" %} #}
 
 {# projects #}
-{% set projects = collections.projectsByYear[year] %}
-{% include "projects-index.njk" %}
+{# {% set projects = collections.projectsByYear[year] %}
+{% include "projects-index.njk" %} #}

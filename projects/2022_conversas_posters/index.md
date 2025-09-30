@@ -19,9 +19,8 @@ year: 2022
 date: 2025-08-27
 
 # 🖼️ Main image (will display on the grid and at the top of the project page)
-# No need for file extension (i.e. image, NOT image.png)
 # ⚠️ Place your images in the 'assets' folder of their respective projects
-thumbnail: posters_thumbnail
+thumbnail: posters_thumbnail.webp
 
 # 💬 Image Alt Text / Describe the image in plain words
 imageAlt: View of two event posters on a black background.
@@ -44,3 +43,8 @@ _Conversas Rotterdam_ has made more than 180 gatherings in the city of Rotterdam
 _Conversas_ is a project initiated in Lisbon by Constança Saraiva and Mafalda Fernandes in 2012. Nowadays, it's a project of many people and cities.
 
 ![Graphic showing how IKEA manual inspired posters.](assets/posters_process.jpg "Process picture – the posters were inspired by a grid on an IKEA assembly manual."){.large}
+
+## Other projects I've done for _Conversas_:
+
+- [Conversas.net Website](/projects/2023_conversas_website)
+- [Conversas Rotterdam 171–180 Publication](/projects/2025_conversas_publication)

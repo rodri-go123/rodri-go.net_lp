@@ -19,9 +19,8 @@ year: 2024
 date: 2025-08-31
 
 # 🖼️ Main image (will display on the grid and at the top of the project page)
-# No need for file extension (i.e. image, NOT image.png)
 # ⚠️ Place your images in the 'assets' folder of their respective projects
-thumbnail: video_thumbnail
+thumbnail: video_thumbnail.webp
 
 # 💬 Image Alt Text / Describe the image in plain words
 imageAlt: Stack of four identical black and white A5 magazines, each decorated with differently coloured stickers.

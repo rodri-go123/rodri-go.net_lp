@@ -5,52 +5,28 @@ subtitle: How can people self-govern their internet experience? How can they obt
 info: Series of Publications
 year: 2021
 date: 2025-03-23
-thumbnail: aw1
-imageAlt: 3D render of a desk
+thumbnail: aw1.webp
+imageAlt: A 3D render of a room. A monitor stands atop a desk, with the message "thanks for watching". 
 size: medium
 categories: ["Research", "Design"]
 ---
 
-hi from autonomous web!
+## How can people self-govern their internet experience? How can they obtain autonomy from the internet while still being able to use it according to their needs? These are the questions at the core of the _Autonomous Web_, a series of digital and physical publications, which attempt to imagine alternatives to the current lack of autonomy on the internet.
 
-let's make page-size display!
+_The Autonomous Web_ project has taken part in [ZineCamp Festival](https://zinecamp2021.hotglue.me/?workshops), [Conversas](https://conversas.net) and the [WdKA Graduation Show](https://graduation.catalogue.wdka.nl/2021-rodrigo-cardoso/projects/autonomous-web/). Featured in [Trade Plough online magazine](https://www.tradeplough.com/episode-9.html) and on an interview in [wdka.nl](https://www.wdka.nl/alumni/the-autonomous-web). Nominated for the 2021 WdKA Bachelor Research Award.
 
-and let's make the navbar not fixed in project page.
+![Diptych. On the left side, one can see a 3D render of series of frozen alien-like beings; On the right, a render of a stack of circuitboards surrounded by plants and a solar panel.](assets/diptych.jpg " "){.large}
 
-How can people self-govern their internet experience? How can they obtain autonomy from the internet while still being able to use it according to their needs?
-These are the questions at the core of the Autonomous Web, an iterative series of digital and physical publications, which attempt to imagine alternatives to the current lack of autonomy on the internet.
+In its search for internet autonomy, this publication reimagines the web as two extreme versions of itself. An oppressive, alienating dystopia where users became enslaved by the web, and its polar opposite, a utopian realm where biological life and the autonomous internet exist in true cybernetic harmony.
 
-The Autonomous Web project has taken part in ZineCamp Festival, Conversas and the WdKA Graduation Show.
-Featured in Trade Plough online magazine and on wdka.nl.
-Nominated for the 2021 WdKA Bachelor Research Award. 
+![Spread from AW graphic novel. Two alien beings explore an earth whose population's minds have been taken over by the internet.](assets/brainwashed.jpg "Spread from AW graphic novel. Two alien beings explore an earth whose population's minds have been taken over by the internet."){.large}
 
-# This is a h1
+The negative story takes the form of a comic novel, examining the myriad ways in which the internet cunningly takes away our freedom. In this world, which could be us in a not so distant future, people live in a zombie-like state. Constantly connected to their digital devices, that shun them from reality, they live and die as data generators for the Cloud.
 
-## this is a h2
+The positive story is a catalogue of experiments, thoughts and behaviours focused on autonomy and the internet. It addresses the nasty aspects of the web as told in the pessimistic story. In doing so, it reimagines the internet as we know it as the speculative _Autonomous Web,_ an internet which is decentralised, where people have control over their own data, identity and actions and where browsing is an embodied and often multi-user experience.
 
-### and a h3
+![Still from AW comic novel. Zine being handed out](assets/handout.jpg " "){.large}
 
-And now we're going to write a little more, throw in some **bold** and *italic,* and paste an image right below this:
+The _Experimental Handbook for Internet Autonomy_ is a Zine, which you can print [here](https://rodri-go.net/theautonomousweb/experimental_handbook_for_internet_autonomy.pdf). As the physical counterpart of this publication, it takes the experiments and behaviours of _the Autonomous Web_ and turns them into executable ‘human algorithms’, making them tangible tools for collaborative (re)thinking about our relationship to the network.
 
-the image below should be extra large 
 
-![alt text](assets/aw2.jpg){.extra-large}
-
-the image below should be large 
-
-![alt text](assets/aw2.jpg){.large}
-
-this one medium
-
-![alt text](assets/aw2.jpg){.medium}
-
-the next image should be small
-
-![alt text](assets/aw5.jpg){.small}
-
-last one has no class 
-
-![alt text](assets/aw5.jpg)
-<em>seeing if this is in the same p as the image</em>
-
-another paragraph

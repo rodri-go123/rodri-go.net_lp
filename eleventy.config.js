@@ -40,28 +40,28 @@ export default function (eleventyConfig) {
 		return map;
 	});
 
-	// Projects by year, sorted by date
-	eleventyConfig.addCollection("projectsByYear", (collectionApi) => {
-		const map = {};
-		collectionApi.getFilteredByTag("project").forEach((project) => {
-		const year = project.data.year;
-		if (!map[year]) map[year] = [];
-		map[year].push(project);
-		});
-		for (const year in map) {
-		map[year].sort((a, b) => b.date - a.date);
-		}
-		return map;
-	});
+	// // Projects by year, sorted by date
+	// eleventyConfig.addCollection("projectsByYear", (collectionApi) => {
+	// 	const map = {};
+	// 	collectionApi.getFilteredByTag("project").forEach((project) => {
+	// 	const year = project.data.year;
+	// 	if (!map[year]) map[year] = [];
+	// 	map[year].push(project);
+	// 	});
+	// 	for (const year in map) {
+	// 	map[year].sort((a, b) => b.date - a.date);
+	// 	}
+	// 	return map;
+	// });
 
-	// All years list, sorted descending
-	eleventyConfig.addCollection("yearsList", (collectionApi) => {
-		const years = new Set();
-		collectionApi.getFilteredByTag("project").forEach((project) => {
-		if (project.data.year) years.add(project.data.year);
-		});
-		return [...years].sort((a, b) => b - a);
-	});
+	// // All years list, sorted descending
+	// eleventyConfig.addCollection("yearsList", (collectionApi) => {
+	// 	const years = new Set();
+	// 	collectionApi.getFilteredByTag("project").forEach((project) => {
+	// 	if (project.data.year) years.add(project.data.year);
+	// 	});
+	// 	return [...years].sort((a, b) => b - a);
+	// });
 
 	// All categories list
 	eleventyConfig.addCollection("categoriesList", (collectionApi) => {
@@ -127,7 +127,7 @@ export default function (eleventyConfig) {
 				}
 
 				// convert extension to .webp if needed
-				if (!src.toLowerCase().endsWith(".webp")) {
+				if (!src.toLowerCase().endsWith(".webp") || !src.toLowerCase().endsWith(".gif")) {
 				src = src.replace(/\.(jpg|jpeg|png)$/i, ".webp");
 				}
 

@@ -19,9 +19,8 @@ year: 2025
 date: 2025-09-02
 
 # 🖼️ Main image (will display on the grid and at the top of the project page)
-# No need for file extension (i.e. image, NOT image.png)
 # ⚠️ Place your images in the 'assets' folder of their respective projects
-thumbnail: insta-bg
+thumbnail: insta-bg.webp
 
 # 💬 Image Alt Text / Describe the image in plain words
 imageAlt: Poster announcing event, showing the title "Is This Real" stylised as a newspaper article on a smartphone screen.
@@ -33,9 +32,11 @@ size: small
 # 🗂️ Categories (tags for filtering projects)
 # Keep quotes & brackets, separate by commas (i.e. ["Category1", "Category2", "Category3"])
 categories: ["Design", "Identity", "Poster"]
+
+imageClass: narrow
 ---
 
-_Practicum Artium_ electives are a one-year programme organised by the Academy of Creative and Performing Arts (ACPA), a collaboration between Leiden University, the Royal Academy of Art (KABK) and the Royal Conservatoire (KC). I designed the visual identity and promotional material for their 8th edition end-of-year exhibition, _Is This Real,_ showcasing student work from painting, drawing, film and photography classes.
+## _Practicum Artium_ electives are a one-year programme organised by the Academy of Creative and Performing Arts (ACPA), a collaboration between Leiden University, the Royal Academy of Art (KABK) and the Royal Conservatoire (KC). I designed the visual identity and promotional material for their 8th edition end-of-year exhibition, _Is This Real,_ showcasing student work from painting, drawing, film and photography classes.
 
 ![Overview of promotional material announcing the exhibition, including flyers, exhibition texts, instagram posts, wayfinding signs and a website banner.](assets/reel.jpg " "){.extra-large}
 

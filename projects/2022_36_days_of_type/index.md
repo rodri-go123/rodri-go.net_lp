@@ -6,7 +6,7 @@ layout: page_projects.njk
 title: 36 Days of Type 2022
 
 # ✏️ Subtitle / A one-line description of the project
-subtitle: A character a day for 36 days.
+subtitle: A letter a day for 36 days.
 
 # ℹ️ Info Tag (extra detail, like "Installation", "Client Work", "Prototype"). Keep this short, usually 1–2 words
 info: Type
@@ -19,9 +19,8 @@ year: 2022
 date: 2025-08-26
 
 # 🖼️ Main image (will display on the grid and at the top of the project page)
-# No need for file extension (i.e. image, NOT image.png)
 # ⚠️ Place your images in the 'assets' folder of their respective projects
-thumbnail: thumbnail
+thumbnail: thumbnail.webp
 
 # 💬 Image Alt Text / Describe the image in plain words
 imageAlt: View of four letters, spelling TYPE, on a black background.

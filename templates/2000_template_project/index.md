@@ -1,4 +1,4 @@
----
+<!-- ---
 # 🖼️ Page Layout (DON'T CHANGE)
 layout: page_projects.njk # Please don't change
 
@@ -65,4 +65,4 @@ Here’s how you can add images (make sure they’re in the `assets` folder of t
 ✏️ **Tips for editing:**
 - Replace all example text with your own project details.
 - Keep the format of the `---` block at the top (called "frontmatter") the same.
-- Always put your images in the `assets` folder and reference them as `assets/your-image.jpg`.
+- Always put your images in the `assets` folder and reference them as `assets/your-image.jpg`. -->

@@ -19,9 +19,8 @@ year: 2025
 date: 2025-09-05
 
 # 🖼️ Main image (will display on the grid and at the top of the project page)
-# No need for file extension (i.e. image, NOT image.png)
 # ⚠️ Place your images in the 'assets' folder of their respective projects
-thumbnail: thumbnail
+thumbnail: thumbnail.webp
 
 # 💬 Image Alt Text / Describe the image in plain words
 imageAlt: A circuit box and an electronic ink screen inside a transparent enclosure. On the screen, barely readable, one can see the leftovers of a faded message - my guilty conscience.
@@ -55,4 +54,4 @@ Decaying Data proposes that increases in energy efficiency, including 'green gro
 
 ![Screen, with the message that the mud is charging. ](assets/something_new.jpg "Last question before the visitor can send their message."){.small}
 
-The microbial fuel cells and energy-harvesting electronics draw on Sunjoo Lee’s research developed during her project [_Electric Garden_](https://sunjoolee.com/Electric-Garden).
+The microbial fuel cells and energy-harvesting electronics draw on Sunjoo Lee’s research developed during her project [_Electric Garden_](https://sunjoolee.com/Electric-Garden). _Decaying Data_ was exhibited in the [2025 KABK Graduation Show](https://graduation.kabk.nl/2025/rodrigo-cardoso) and builds on the theoretical framework formulated in my masters thesis [_Fungal Tech_](/projects/2025_fungal_tech/).

@@ -19,9 +19,8 @@ year: 2024
 date: 2025-09-01
 
 # 🖼️ Main image (will display on the grid and at the top of the project page)
-# No need for file extension (i.e. image, NOT image.png)
 # ⚠️ Place your images in the 'assets' folder of their respective projects
-thumbnail: serving
+thumbnail: serving.webp
 
 # 💬 Image Alt Text / Describe the image in plain words
 imageAlt: Medium shot of a group of 5 people sat around a low round table, smiling as coffee is prepared.
@@ -48,7 +47,5 @@ relationship with the caffeinated beverage.
 The collaborative coffee servings create a moment for coffee to be reclaimed not as yet another quick-fix for productivity, but as an opportunity to gather around and share stories, sparking critical conversations about our relationship with it. During each serving, the brewing process is broken into stages and interwoven with re-tellings of the Dutch colonial history with coffee, informed by my own research in the National Archive, told from the perspective of the _Coffea Arabica_ plant herself, as a more-than-human entity.
 
 ![View of the same group as before, sitting around the table, partially hidden behind a pilar, from further away. ](assets/back.jpg "Photo by Roel Backaert for the master Non-Linear Narrative."){.large}
-
-The collaborative coffee servings create a moment for coffee to be reclaimed not as yet another quick-fix for productivity, but as an opportunity to gather around and share stories, sparking critical conversations about our relationship with it. During each serving, the brewing process is broken into stages and interwoven with re-tellings of the Dutch colonial history with coffee, informed by my own research in the National Archive, told from the perspective of the _Coffea Arabica_ plant herself, as a more-than-human entity.
 
 As they enjoy their carefully brewed coffee, each participant is invited to discuss a question attached to their coffee, fuelling the conversation further. The _Reflective Coffee Corner_ servings ran parallel to a [_A Reflective Cup of Coffee_](/projects/2025_reflective_cup_of_coffee), a video essay focused solely on the re-telling of coffee’s colonial history.
