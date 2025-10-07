@@ -50,7 +50,7 @@ The installation is controlled by a series of mud-based microbial fuel cells –
 
 ![Mud cells in resting area, plugged to a multimeter reading 0.8V ](assets/cells2_roel.jpg "Photo by Roel Backaert for the master Non-Linear Narrative."){.medium}
 
-Decaying Data proposes that increases in energy efficiency, including 'green growth' narratives, will only matter if coupled with extensive cutbacks in consumption. As such, a meaningful ecological transition requires a substantial behavioural change, shifting us away from the growing demand for energy-intensive and environmentally-damaging technologies. The installation offers a physical alternative to the myth of the immaterial 'cloud,' inviting digital degrowth and the radical act of deletion.  
+_Decaying Data_ proposes that increases in energy efficiency, including 'green growth' narratives, will only matter if coupled with extensive cutbacks in consumption. As such, a meaningful ecological transition requires a substantial behavioural change, shifting us away from the growing demand for energy-intensive and environmentally-damaging technologies. The installation offers a physical alternative to the myth of the immaterial 'cloud', inviting digital degrowth and the radical act of deletion.  
 
 ![Screen, with the message that the mud is charging. ](assets/something_new.jpg "Last question before the visitor can send their message."){.small}
 

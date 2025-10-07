@@ -26,7 +26,13 @@ css:
 
       {% set cleanUrl = page.url | replace('^/', '') %}
       {% set lookupKey = page.url.slice(1) ~ 'index.html' %}
-      <p class="pr-page-size">{{ siteSize.pageSizes[lookupKey] or 'Unknown' }} KB</p>
+      <p class="pr-page-size">{{ siteSize.pageSizes[lookupKey] | round(1) or 'Unknown' }} KB
+        <span class="info-icon" tabindex="0">ⓘ
+          <span class="tooltip">
+            Calculated page size including HTML and linked assets (images, code, etc.)
+          </span>
+        </span>
+      </p>
     </div>
   </div>
 

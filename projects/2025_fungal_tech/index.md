@@ -54,4 +54,4 @@ By bridging fungi-inspired ecological thought with ongoing efforts in academia a
 digital activism, it aims to contribute frameworks for building technologies rooted in
 interdependence, collective autonomy and systems thinking.
 
-### [Download the full thesis (pdf file).](assets/Rodrigo_Cardoso_MA_Thesis_Fungal_Tech.pdf)
+### [🔗 Download the full thesis (pdf file).](assets/Rodrigo_Cardoso_MA_Thesis_Fungal_Tech.pdf)

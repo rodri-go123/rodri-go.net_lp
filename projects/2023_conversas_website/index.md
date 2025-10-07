@@ -40,7 +40,7 @@ I have been involved with _Conversas_ as a designer in various capacities (see t
 
 ![Map of Europe and Western Asia with several icons showing the location of different Conversas initiavies.](assets/map.jpg " "){.large}
 
-The website is centred around a map, showing each _Conversas_ project as a node in a broader network of self-initiated, place-based communities that share values and knowledge. The modular _Conversas_ title changes into a different assortment of drawings, symbols and typefaces, writing out the word differently each time the page is accessed. The ever-changing title reflects the project’s evolution into independently organised events, distancing it from a strictly defined identity and ways of doing.
+The website is centred around a map, showing each _Conversas_ project as a node in a broader network of self-initiated, place-based communities that share values and knowledge. The modular _Conversas_ title changes into a different assortment of drawings, symbols and typefaces, writing out the word differently each time the page is accessed. The ever-changing title reflects the project’s evolution into independently organised events, distancing it from strictly defined identities and ways of doing.
 
 ![Variations of the modular Conversas title.](assets/conversas.jpg " "){.small}
 

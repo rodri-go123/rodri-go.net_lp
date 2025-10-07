@@ -46,4 +46,4 @@ However, coffee has been and still is a powerful social bond. In early modern Eu
 
 _A Reflective Cup of Coffee,_ as well as its sister project [_Reflective Coffee Corner_](/projects/2025_reflective_coffee_corner), aim to reclaim coffee drinking as an opportunity to gather around and share stories, sparking critical conversations about our relationship with it.
 
-### [Download the essay in written form (pdf file).](assets/reflective-cup-of-coffee.pdf)
+### [🔗 Download the essay in written form (pdf file).](assets/reflective-cup-of-coffee.pdf)

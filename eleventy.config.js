@@ -5,7 +5,8 @@ import path from 'path';
 // add some extra fluff to the markdown
 import markdownIt from "markdown-it";
 import markdownItAttrs from "markdown-it-attrs";
-import implicitFigures from "markdown-it-implicit-figures";
+import markdownItImageFigures from "markdown-it-image-figures";
+import markdownItFootnotes from 'markdown-it-footnote';
 
 
 export default function (eleventyConfig) {
@@ -101,11 +102,12 @@ export default function (eleventyConfig) {
 		"md",
 		markdownIt({ html: true })
 		.use(markdownItAttrs)
-		// use the image-figures plugin and tell it to use the image TITLE as the figcaption
-		.use(implicitFigures, {
-			figcaption: "title", // use the image "title" (the "..." part) for <figcaption>
-			copyAttrs: true,     // copy .class (from markdown-it-attrs) to the <figure>
+		.use(markdownItFootnotes)
+		.use(markdownItImageFigures, {
+			figcaption: "title",
+			copyAttrs: true,
 		})
+
 		.use(function (md) {
 			const defaultRender =
 			md.renderer.rules.image ||

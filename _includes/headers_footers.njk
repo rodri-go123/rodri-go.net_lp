@@ -31,8 +31,8 @@ css:
         <div class="nav-right flex-center">
           <a href="{% if page.url == '/' %}#work{% else %}/#work{% endif %}" class="nav-btn {% if page.url == '/' %}active{% endif %}">Work</a>
           <a href="/about" class="nav-btn about {% if page.fileSlug == 'about' %}active{% endif %}">About</a>
-          <a href="/contact" class="nav-btn contact {% if page.fileSlug == 'contact' %}active{% endif %}">Contact</a>
-          <a href="/blog" class="nav-btn blog {% if page.fileSlug == 'blog' %}active{% endif %}">Blog</a>
+          <a href="/about/#contact" class="nav-btn contact {% if page.fileSlug == 'contact' %}active{% endif %}">Contact</a>
+          <a href="/blog" class="nav-btn blog {% if page.fileSlug == 'blog' %}active{% endif %}" style="display: none">Blog</a>
       </div>
     </nav>
 
@@ -47,13 +47,12 @@ css:
         <div class="foot-left flex-center">  
           <p>Get in touch</p>
           <a href="mailto:rodrigo@rodri-go.net">rodrigo@rodri-go.net</a>
-          <a href="https://github.com/rodri-go123">github</a>
-          <a href="https://www.instagram.com/djingerale/">instagram</a>   
+          <a href="https://github.com/rodri-go123">Github</a>
         </div>
 
         <div class="foot-right flex-center">
           <p>This site is designed to minimise energy use.</p>
-          <p>Total site size: {{ (siteSize.totalSize / 1024) | round(2) }} MB</p>
+          <p>Average page size: {{ (siteSize.averageProjectPageSize) | round(1) }} KB</p>
         </div>
 
       </div>

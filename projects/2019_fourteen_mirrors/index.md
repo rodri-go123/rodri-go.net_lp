@@ -11,6 +11,6 @@ size: small
 categories: ["Design", "Poster"]
 ---
 
-## Two posters made for the Fourteen Mirrors exhibition at the [Palace of Typographic Masonry](https://palaceoftypographicmasonry.nl/), one of them to promote the exhibition itself, made in collaboration with Nanco Speur, and another as an exhibition piece at the event, made with Annabel Kers, Reinier de Waal and Jessy Richter.
+## Two posters made for the _Fourteen Mirrors_ exhibition at the [Palace of Typographic Masonry](https://palaceoftypographicmasonry.nl/), one of them to promote the exhibition itself, made in collaboration with Nanco Speur, and another as an exhibition piece at the event, made with Annabel Kers, Reinier de Waal and Jessy Richter.
 
 ![Poster showing four interpretations of Koen Tasselar's artwork and comparing it to other artists.](assets/koen_poster.jpg " "){.medium}

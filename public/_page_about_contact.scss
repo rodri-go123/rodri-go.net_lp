@@ -3,20 +3,29 @@
     padding-bottom: var(--spacer);
 }
 
-.about-contact-body p {
-  font-size: 1rem;
-  width: 65%;
+.about-contact-body h1 {
+  margin-top: calc(var(--spacer) * 3);
+  scroll-margin-top: 90px;
+}
+
+.about-contact-body h1, .about-contact-body h2, .about-contact-body h3, .about-contact-body p {
+  width: var(--text-width)
+}
+
+.about-contact-body h2 {
   line-height: 130%;
 }
 
-// Media queries
+.about-contact-body p {
+  font-size: 1rem;
+  line-height: 130%;
+}
 
-/* Vertical layouts */
+.about-contact-body a {
+  color: var(--purple-blue);
+  text-decoration: none;
+}
 
-@media (width <= 950px) {
-
-  .about-contact-body p {
-    width: 100%;
-  }
-
+.about-contact-body a:hover {
+  text-decoration: underline;
 }

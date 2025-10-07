@@ -37,7 +37,7 @@ categories: ["Design", "Publication"]
 ## _Conversas_ is a series of monthly informal meetings to get to know each other and share projects, stories, or interests. Each series of ten _Conversas_ is documented in a printed publication.
 <br>
 
-Bottom-up, self-organised, and DIY projects such as _Conversas_ give way to hopeful conversations on how we can do things differently – be that about navigating complex socio-political issues, finding identity and community in shared practices, or fostering understanding through embracing the quirks of miscommunication (all topics brought up during this series of _Conversas_.) These conversations, made possible by the wonderful group of speakers, active listeners, and organisers who make it all happen, emphasise a diversity of practices and ways of knowing that inform them and allow them to speak to each other unconstrained by the strict hierarchies that shape many forms of public speaking.
+Bottom-up, self-organised, and DIY projects such as _Conversas_ give way to hopeful conversations on how we can do things differently – be that about navigating complex socio-political issues, finding identity and community in shared practices, or fostering understanding through embracing the quirks of miscommunication (all topics brought up during this series of _Conversas_). These conversations, made possible by the wonderful group of speakers, active listeners, and organisers who make it all happen, emphasise a diversity of practices and ways of knowing that inform them and allow them to speak to each other unconstrained by the strict hierarchies that shape many forms of public speaking.
 
 
 ![Spread of magazine, showing polaroid photos of three event speakers next to a text describing each conversation.](assets/spread.jpg " "){.large}
@@ -46,7 +46,7 @@ It is important that such initiatives are properly documented and archived. This
 
 ![Cover and backside of magazine with yellow stickers on it.](assets/yellow.jpg "Each cover is unique – decorated by participants during the launch event."){.large}
 
-Designing for such a project comes with the privilege of being playful. From the _Conversas_ 'logo,' which refuses a fixed form, to the posters, built on a grid system found on an IKEA instructions manual, and this publication, which occasionally borrows from punk collages while trying to give plenty of room to the many Conversadores who compose it, as well as Sebastiaan Helber’s incredible analogue photography, the work I have done for Conversas stubbornly avoids a cohesive visual style. 
+Designing for such a project comes with the privilege of being playful. From the _Conversas_ 'logo', which refuses a fixed form, to the posters, built on a grid system found on an IKEA instructions manual, and this publication, which occasionally borrows from punk collages while giving plenty of room to the many Conversadores who compose it, as well as Sebastiaan Helber’s incredible analogue photography, the work I have done for _Conversas_ stubbornly avoids a cohesive visual style. 
 
 This is much to my pleasure, though perhaps to the frustration of fellow graphic designers reading this. It is not a bold artistic statement or even an intentional choice, but rather a reflection of the process behind a project that lives purely from the genuine interest of those involved in it – messy, experimental, and scattered over four years, which saw me through different homes, jobs, studies, cities and even countries.
 

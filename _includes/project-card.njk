@@ -20,5 +20,11 @@
 
   {# Lookup the page size #}
   {% set lookupKey = project.url.slice(1) ~ 'index.html' %}
-  <p class="pr-info">{{ siteSize.pageSizes[lookupKey] or 'Unknown' }} KB</p>
+  <p class="pr-info">{{ siteSize.pageSizes[lookupKey] | round(1) or 'Unknown' }} KB 
+    <span class="info-icon" tabindex="0">ⓘ
+      <span class="tooltip">
+        Calculated page size including HTML and linked assets (images, code, etc.)
+      </span>
+    </span>
+  </p> 
 </div>

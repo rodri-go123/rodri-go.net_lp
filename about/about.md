@@ -3,22 +3,34 @@ title: rodri-go.net
 layout: page_about_contact.njk
 ---
 
-## Bio
+<h1 id="about-rodrigo">About Rodrigo</h1>
 
-Rodrigo (he/him) is a researcher, designer, and programmer exploring the ecological and social dimensions of digital technology.
+## Rodrigo Cardoso (he/him) is a designer, programmer and researcher interested in the ecological and social dimensions of digital technology.
 
-His work challenges how we build and relate to digital tools by examining the entanglements between technological and living systems. Through tinkering with, repurposing, and engaging playfully with existing tools, he aims to collectivise access to, and promote systemic literacy around, the technological systems we rely on. 
+His work questions how we build digital tools by examining how the thinking that informs them, along with their energy use and infrastructure, shape both people and the planet. Through acts of tinkering and repurposing, he exposes the hidden material and ideological dimensions of technology, helping build collective agency over the digital systems that underpin everyday life.
 
-Coming from a background in graphic design and web development, Rodrigo is currently following the Non-Linear Narrative Masters at the Royal Academy of Art (KABK) in The Hague, where he is further positioning himself as a researcher alongside a practitioner. 
+Rodrigo has a bachelor's in [Graphic Design](https://www.wdka.nl/programmes/graphic-design) with a minor in Digital Craft from Willem de Kooning Academy (Rotterdam, NL), a master's in Fine Art and Design from the [Non Linear Narrative](https://www.kabk.nl/en/programmes/master/non-linear-narrative) programme at the Royal Academy of Art (The Hague, NL), and has completed a full-stack web development bootcamp at Le Wagon (Cologne, GER). He has worked as a graphic designer and web developer.
 
-## About the website
+<h1 id="contact">Contact</h1>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Reach out to me directly at [rodrigo@rodri-go.net](mailto:rodrigo@rodri-go.net).
+
+For code and software projects, see my [Github](https://github.com/rodri-go123). <br>
+For video, see my [Vimeo](https://vimeo.com/user102586862). <br>
+I occasionaly post updates of my work on [Instagram](https://www.instagram.com/djingerale/).
+
+<h1 id="about-website">About the website</h1>
+
+## This site is designed to minimise energy use, based on _Low-tech Magazine's_ [guide](https://github.com/lowtechmag/solar/wiki/Solar-Web-Design) on how to build a low-tech website, while providing plenty of space to elaborate on each project.
+
+To avoid server-side computation, this website is built with [Eleventy](https://www.11ty.dev/), a lightweight static site generator[^1]. Each build is done locally[^2], and only the generated files are uploaded to the server, reducing the number of files stored and served.
+
+Every design choice prioritises low energy use and accessibility, including support for older machines and slower connections. Images are automatically compressed during the build process, helping reduce page size. The site uses default typefaces, avoids client-side JavaScript[^3] and displays each page’s size for transparency. Because much of my work is research-based, each project gets its own page in a blog-style layout. This format is heavier than a single-page design, but it provides space to fully explain each project.
+
+This site is not meant as a definitive solution for 'sustainable' web development, many websites go further in their commitment minimise energy use. Rather, it represents my own contribution to a more energy-conscious internet: my personal approach to a 'low-tech' website.
+
+[^1]: A program that builds the website as a series of pre-made pages without running code on a server each time a page gets accessed.
+[^2]: Each time it gets updated, the site is generated on my own computer before being uploaded.
+[^3]: Avoids extra code that would need your browser to run it.
 
 {% include "size_summary.njk" %}
-
-## CV
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.  

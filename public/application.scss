@@ -4,6 +4,7 @@
   --truck-red: #DF2E38;
   --spacer: 24px;
   --page-width: 1160px;
+  --text-width: 65%;
   --border-width: 1.5px;
   --hover-color: #4848d300;
   --vert-layout-break: 950px;
@@ -86,14 +87,14 @@ a {
 // Text //
 
 h1, h2, h3 {
-  font-weight: 500;
+  font-weight: 400;
   hyphens: none;
 }
 
 h2 {
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0.8px;
 }
 
@@ -160,6 +161,88 @@ h2 {
   color: var(--black-grey);
 }
 
+// Footnotes //
+
+.footnotes-sep {
+  width: var(--text-width);
+  float: left;
+  display: block;
+  border-width: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.103);
+  margin: var(--spacer) 0 calc(var(--spacer)*1.5) 0;
+}
+
+.footnotes {
+  display: block;
+  width: var(--text-width);
+}
+
+.footnotes-list {
+  padding-left: 20px;
+  font-size: 0.8rem;
+}
+
+.footnotes-list > .footnote-item > p {
+  font-size: 0.9rem;
+}
+
+.footnote-ref {
+  line-height: 100%;
+}
+
+// Info and tooltip //
+
+.info-icon {
+  cursor: help;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  font-size: 0.75rem;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.info-icon .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -100%;
+  left: 150%;
+  background: #333;
+  color: #fff;
+  padding: 0.6em 0.8em;
+  font-size: 0.75rem;
+  width: max-content;
+  max-width: 250px;
+  white-space: normal;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 100;
+  line-height: 110%;
+  font-weight: normal;
+}
+
+/* Arrow */
+.info-icon .tooltip::after {
+  // content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Show tooltip on hover or keyboard focus */
+.info-icon:hover .tooltip,
+.info-icon:focus .tooltip,
+.info-icon:focus-within .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 // Media Queries //
 
 // Monitors, large laptops //
@@ -202,6 +285,7 @@ h2 {
 
   :root {
     --page-width: 92vw;
+    --text-width: 100%;
   }
 
 }

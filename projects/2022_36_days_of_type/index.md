@@ -32,6 +32,8 @@ size: small
 # 🗂️ Categories (tags for filtering projects)
 # Keep quotes & brackets, separate by commas (i.e. ["Category1", "Category2", "Category3"])
 categories: ["Design", "Typography"]
+
+imageClass: narrow
 ---
 
 ## I joined the _36 Days of Type_ challenge, designing a character a day for 36 days. It was surprisingly fun and the priceless feeling of getting in a flow made it all worth it. Here are some of my favourite letters.

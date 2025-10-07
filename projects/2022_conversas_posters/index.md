@@ -36,7 +36,7 @@ categories: ["Design", "Poster"]
 
 ## _Conversas_ is a series of monthly informal meetings to get to know each other and share projects, stories, or interests. Each series of ten Conversas brings in a different designer for ten unique event posters and a [publication](projects/2025_conversas_publication).
 
-![Grid view of 10 event posters.](assets/posters_grid.jpg " "){.extra-large}
+![Grid view of 10 event posters.](assets/posters_grid.jpg " "){.large}
 
 _Conversas Rotterdam_ has made more than 180 gatherings in the city of Rotterdam. The 18th series of Conversas Rotterdam happened between March and December 2022 and was organised by Constança Saraiva, Silvija Almanaitytè, Shambhavi Bhat, Sebastian Helbers, and Maurice Suitela.
 
