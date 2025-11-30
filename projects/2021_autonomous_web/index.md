@@ -8,7 +8,7 @@ date: 2025-03-23
 thumbnail: aw1.webp
 imageAlt: A 3D render of a room. A monitor stands atop a desk, with the message "thanks for watching". 
 size: medium
-categories: ["Research", "Design", "Illustration", "Publication"]
+categories: ["Research", "Design", "Publication"]
 ---
 
 ## How can people self-govern their internet experience? How can they obtain autonomy from the internet while still being able to use it according to their needs? These are the questions at the core of the _Autonomous Web_, a series of digital and physical publications, which attempt to imagine alternatives to the current lack of autonomy on the internet.

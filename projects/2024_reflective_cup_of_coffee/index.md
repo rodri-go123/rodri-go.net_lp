@@ -3,7 +3,7 @@
 layout: page_projects.njk
 
 # 📌 Project Title
-title: A Reflective Cup of Coffe
+title: A Reflective Cup of Coffee
 
 # ✏️ Subtitle / A one-line description of the project
 subtitle: Coffee’s colonial history as told by Coffee, based on archival research.

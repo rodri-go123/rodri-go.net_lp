@@ -19,6 +19,7 @@ export default function (eleventyConfig) {
 
 	// create collections for filtering
 
+	// PROJECTS
 	// sort projects by date, newest fist
 	eleventyConfig.addCollection("sortedProjects", (collectionApi) => {
 		return collectionApi.getFilteredByTag("project").sort((a, b) => {
@@ -39,6 +40,47 @@ export default function (eleventyConfig) {
 		map[cat].sort((a, b) => b.date - a.date);
 		}
 		return map;
+	});
+
+	// All PROJECT categories list
+	eleventyConfig.addCollection("categoriesList", (collectionApi) => {
+		const categories = new Set();
+		collectionApi.getFilteredByTag("project").forEach((project) => {
+		(project.data.categories || []).forEach((cat) => categories.add(cat));
+		});
+		return [...categories];
+	});
+
+	// POSTS
+	// sort posts by date, newest fist
+	eleventyConfig.addCollection("sortedPosts", (collectionApi) => {
+		return collectionApi.getFilteredByTag("post").sort((a, b) => {
+		return b.date - a.date;
+		});
+  	});
+
+	// Posts by category, sorted by date
+	eleventyConfig.addCollection("postsByCategory", (collectionApi) => {
+		const map = {};
+		collectionApi.getFilteredByTag("post").forEach((post) => {
+		(post.data.categories || []).forEach((cat) => {
+			if (!map[cat]) map[cat] = [];
+			map[cat].push(post);
+		});
+		});
+		for (const cat in map) {
+		map[cat].sort((a, b) => b.date - a.date);
+		}
+		return map;
+	});
+
+	// All POST categories list
+	eleventyConfig.addCollection("postCategoriesList", (collectionApi) => {
+		const categories = new Set();
+		collectionApi.getFilteredByTag("post").forEach((post) => {
+		(post.data.categories || []).forEach((cat) => categories.add(cat));
+		});
+		return [...categories];
 	});
 
 	// // Projects by year, sorted by date
@@ -63,15 +105,6 @@ export default function (eleventyConfig) {
 	// 	});
 	// 	return [...years].sort((a, b) => b - a);
 	// });
-
-	// All categories list
-	eleventyConfig.addCollection("categoriesList", (collectionApi) => {
-		const categories = new Set();
-		collectionApi.getFilteredByTag("project").forEach((project) => {
-		(project.data.categories || []).forEach((cat) => categories.add(cat));
-		});
-		return [...categories];
-	});
 
 
 	// compile SCSS files
@@ -108,35 +141,65 @@ export default function (eleventyConfig) {
 			copyAttrs: true,
 		})
 
-		.use(function (md) {
-			const defaultRender =
-			md.renderer.rules.image ||
-			function (tokens, idx, options, env, self) {
-				return self.renderToken(tokens, idx, options);
-			};
+		// config for images and external links
+		.use((md) => {
+			// webp image rendering
+			const defaultImageRender =
+				md.renderer.rules.image ||
+				((tokens, idx, options, env, self) =>
+				self.renderToken(tokens, idx, options));
 
-			// your custom image rendering (assets/ prefix + .webp conversion)
-			md.renderer.rules.image = function (tokens, idx, options, env, self) {
-			const token = tokens[idx];
-			const srcIndex = token.attrIndex("src");
+			md.renderer.rules.image = (tokens, idx, options, env, self) => {
+				const token = tokens[idx];
+				const srcIndex = token.attrIndex("src");
 
-			if (srcIndex >= 0) {
+				if (srcIndex >= 0) {
 				let src = token.attrs[srcIndex][1];
 
-				// add assets/ if no folder is present
+				// Add assets/ if no folder is present
 				if (!src.includes("/") && !src.startsWith("assets/")) {
-				src = "assets/" + src;
+					src = "assets/" + src;
 				}
 
-				// convert extension to .webp if needed
-				if (!src.toLowerCase().endsWith(".webp") || !src.toLowerCase().endsWith(".gif")) {
-				src = src.replace(/\.(jpg|jpeg|png)$/i, ".webp");
+				// Convert extension to .webp if applicable
+				if (!src.toLowerCase().endsWith(".webp") && !src.toLowerCase().endsWith(".gif")) { // skip gifs
+					src = src.replace(/\.(jpg|jpeg|png)$/i, ".webp");
 				}
 
 				token.attrs[srcIndex][1] = src;
-			}
+				}
 
-			return defaultRender(tokens, idx, options, env, self);
+				return defaultImageRender(tokens, idx, options, env, self);
+			};
+
+			// External links on new tab
+			const defaultLinkRender =
+				md.renderer.rules.link_open ||
+				((tokens, idx, options, env, self) =>
+				self.renderToken(tokens, idx, options));
+
+			md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+				const hrefIndex = tokens[idx].attrIndex("href");
+
+				if (hrefIndex >= 0) {
+					const href = tokens[idx].attrs[hrefIndex][1];
+
+					const isExternal = /^https?:\/\//i.test(href); // check if link is external
+					const isMailto = /^mailto:/i.test(href); // don't modify mailto links
+
+					// whitelisted domains, 
+					const internalDomains = ["rodri-go.net", "8080"];
+
+					// some() returns true if any domain matches
+					const isInternal = internalDomains.some(domain => href.includes(domain));
+
+					if (isExternal && !isMailto && !isInternal) {
+						tokens[idx].attrPush(["target", "_blank"]);
+						tokens[idx].attrPush(["rel", "noopener noreferrer"]);
+					}
+				}
+
+				return defaultLinkRender(tokens, idx, options, env, self);
 			};
 		})
   	);
@@ -146,9 +209,15 @@ export default function (eleventyConfig) {
 		"projects/**/assets/_processed": "projects"
 	});
 
+	// Use compressed images in posts
+	eleventyConfig.addPassthroughCopy({
+		"posts/**/assets/_processed": "posts"
+	});
+
 	// After build: move compressed images up one level and remove originals
 	eleventyConfig.on("afterBuild", () => {
 		const projectsDir = "_site/projects";
+		const postsDir = "_site/posts";
 
 		const walkSync = (dir) => {
 			fs.readdirSync(dir).forEach((file) => {
@@ -190,6 +259,11 @@ export default function (eleventyConfig) {
 		if (fs.existsSync(projectsDir)) {
 			walkSync(projectsDir);
 			removeOriginals(projectsDir);
+		}
+
+		if (fs.existsSync(postsDir)) {
+			walkSync(postsDir);
+			removeOriginals(postsDir);
 		}
 	});
 

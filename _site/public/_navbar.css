@@ -52,6 +52,10 @@
   letter-spacing: 1px;
 }
 
+.contact {
+  display: none;
+}
+
 /* Vertical layouts */
 @media (width <= 950px) {
   #navbar {
@@ -74,5 +78,8 @@
   .nav-btn {
     font-size: 1.1rem;
     text-decoration: underline !important;
+  }
+  .contact {
+    display: inline;
   }
 }

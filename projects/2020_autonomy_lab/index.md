@@ -8,7 +8,7 @@ date: 2025-03-21
 thumbnail: thumbnail.webp
 imageAlt: Still from promotional video – yellow angular shapes morphs into a banana to announce Autonomy Lab + Eat Art Collective workshop. 
 size: small
-categories: ["Design", "Motion"]
+categories: ["Design", "Video"]
 imageClass: narrow
 ---
 

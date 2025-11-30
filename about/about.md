@@ -7,9 +7,9 @@ layout: page_about_contact.njk
 
 ## Rodrigo Cardoso (he/him) is a designer, programmer and researcher interested in the ecological and social dimensions of digital technology.
 
-His work questions how we build digital tools by examining how the thinking that informs them, along with their energy use and infrastructure, shape both people and the planet. Through acts of tinkering and repurposing, he exposes the hidden material and ideological dimensions of technology, helping build collective agency over the digital systems that underpin everyday life.
+His work questions how we build digital tools by examining how the socio-political values embedded in them, along with their infrastructure and energy use, shape people and the planet. Through acts of tinkering and repurposing, he exposes the hidden material and ideological dimensions of technology, helping build collective agency over the digital systems that underpin everyday life.
 
-Rodrigo has a bachelor's in [Graphic Design](https://www.wdka.nl/programmes/graphic-design) with a minor in Digital Craft from Willem de Kooning Academy (Rotterdam, NL), a master's in Fine Art and Design from the [Non Linear Narrative](https://www.kabk.nl/en/programmes/master/non-linear-narrative) programme at the Royal Academy of Art (The Hague, NL), and has completed a full-stack web development bootcamp at Le Wagon (Cologne, GER). He has worked as a graphic designer and web developer.
+Rodrigo has a bachelor's in [Graphic Design](https://www.wdka.nl/programmes/graphic-design) with a minor in Digital Craft from Willem de Kooning Academy (Rotterdam, NL), a master's in Fine Art and Design from the [Non Linear Narrative](https://www.kabk.nl/en/programmes/master/non-linear-narrative) programme at the Royal Academy of Art (The Hague, NL), and has completed a full-stack web development bootcamp at Le Wagon (Cologne, DE). He has worked as a graphic designer and web developer.
 
 <h1 id="contact">Contact</h1>
 
@@ -17,7 +17,7 @@ Rodrigo has a bachelor's in [Graphic Design](https://www.wdka.nl/programmes/grap
 
 For code and software projects, see my [Github](https://github.com/rodri-go123). <br>
 For video, see my [Vimeo](https://vimeo.com/user102586862). <br>
-I occasionaly post updates of my work on [Instagram](https://www.instagram.com/djingerale/).
+I occasionally post updates of my work on [Instagram](https://www.instagram.com/djingerale/).
 
 <h1 id="about-website">About the website</h1>
 

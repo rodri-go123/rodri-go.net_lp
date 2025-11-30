@@ -8,7 +8,7 @@ date: 2025-03-19
 thumbnail: thumbnail.webp
 imageAlt: 3D Render. Desk filled with old screens, each showing a different WORM Weekend video. 
 size: small
-categories: ["Design", "Video", "Motion", "Illustration"]
+categories: ["Design", "Video"]
 ---
 
 ## Every weekend is a collection of different stories at WORM. To make justice to this cultural and artistic diversity, each weekend's line-up gets a brand new video. Watch the highlight reel or go through the entire collection:

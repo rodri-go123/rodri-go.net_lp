@@ -52,6 +52,10 @@
   letter-spacing: 1px;
 }
 
+.contact {
+  display:none;
+}
+
 // Media queries
 
 /* Vertical layouts */
@@ -83,6 +87,10 @@
   .nav-btn {
     font-size: 1.1rem;
     text-decoration: underline !important;
+  }
+
+  .contact {
+    display: inline;
   }
 
 }

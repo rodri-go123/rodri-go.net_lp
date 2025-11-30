@@ -31,7 +31,7 @@ size: small
 
 # 🗂️ Categories (tags for filtering projects)
 # Keep quotes & brackets, separate by commas (i.e. ["Category1", "Category2", "Category3"])
-categories: ["Design", "Typography"]
+categories: ["Design"]
 
 imageClass: narrow
 ---

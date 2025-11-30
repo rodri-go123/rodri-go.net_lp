@@ -1,0 +1,28 @@
+---
+title: rodri-go.net
+layout: headers_footers.njk
+css:
+  - /public/_work.css
+  - /public/_project_cards.css
+  - /public/_projects_grid.css
+pagination:
+  data: collections.post
+  size: 12
+  alias: posts
+  reverse: true
+permalink: "{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}blog/"
+---
+
+<h1>Hi from blog index!!</h1>
+
+{# posts index#}
+<div id="projects-container" class="main-section flex-center">
+  <div class="projects-wrapper">
+    {% for project in posts%}
+      {% include "project-card.njk" %}
+    {% endfor %}
+  </div>
+</div>
+
+{# pagination #}
+{% include "pagination.njk" %}
